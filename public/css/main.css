@@ -1,0 +1,152 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END RESET CSS */
+
+:root{
+    --sidebar-width: 250px;
+    --black-1: #000000;
+    --black-2: #1a1a1d;
+    --black-3: #323236;
+    --blue-1: #0F4C75;
+    --blue-2: #3282B8;
+    --blue-3: #BBE1FA;
+    --white-1: #FFFFFF;
+    --white-2: #FAFAFA;
+    --red-1: #A91D3A;
+    --red-2: #C73659;
+    --red-3:#b94c66;
+    
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Titillium Web", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--white-1);
+}
+
+/* Logo */
+.logo {
+    background-color: var(--black-1);
+    padding: 20px;
+}
+
+.logo:hover {
+    background-color: var(--blue-1);
+}
+/* END Logo */
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100%;
+    background-color: var(--black-2);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav .menu {
+    padding: 15px 20px;
+}
+
+nav .menu:hover {
+    background-color: var(--blue-1);
+}
+/* END Navigation */
+
+/* Content */
+.content {
+    padding-left: calc(var(--sidebar-width));
+}
+/* END Content */
+
+/* Footer */
+footer {
+    padding: 20px 20px 20px calc(var(--sidebar-width) + 20px);
+    background-color: var(--black-1);
+    text-align: center;
+}
+
+footer .link {
+    padding: 0 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+footer .link a:hover {
+    color: var(--red-2);
+}
+
+footer .credit {
+    padding: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--black-3);
+    letter-spacing: 2px;
+}
+
+footer .credit a {
+    color: var(--blue-1);
+}
+
+footer .credit img {
+    margin-top: 20px;
+}
+/* END Footer */
