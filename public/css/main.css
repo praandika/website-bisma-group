@@ -86,6 +86,7 @@ a{
 
 .logo:hover {
     background-color: var(--blue-1);
+    cursor: pointer;
 }
 /* END Logo */
 
@@ -108,11 +109,29 @@ nav .menu {
 nav .menu:hover {
     background-color: var(--blue-1);
 }
+
+.active {
+    border-left: 5px solid var(--blue-1);
+    background-color: var(--black-1);
+    padding: calc(20px - 5px) !important;
+    color: var(--blue-2);
+}
+
+.active:hover {
+    background-color: var(--black-1) !important;
+}
 /* END Navigation */
 
 /* Content */
 .content {
     padding-left: calc(var(--sidebar-width));
+}
+
+.item {
+    padding: 50px;
+    border: 1px solid var(--black-3);
+    color: var(--white-2);
+    background-color: var(--black-1);
 }
 /* END Content */
 
