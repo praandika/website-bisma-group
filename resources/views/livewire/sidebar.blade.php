@@ -1,12 +1,12 @@
 <nav>
     <div class="logo">
-        <img src="{{ asset('img/logo.png') }}" alt="Bisma Group 1969" class="img-fluid">
+        <img src="{{ asset('img/logo-only.png') }}" alt="Bisma Group 1969" class="img-fluid">
     </div>
     <a href="/" wire:navigate>
         <div class="menu {{ Request::is('/') ? 'active' : '' }}">Home</div>
     </a>
-    <a href="/product" wire:navigate>
-        <div class="menu {{ Request::is('product') ? 'active' : '' }}">Product</div>
+    <a href="/product/all" wire:navigate>
+        <div class="menu {{ Request::is('product/*') ? 'active' : '' }}">Product</div>
     </a>
     <a href="/simulation" wire:navigate>
         <div class="menu {{ Request::is('simulation') ? 'active' : '' }}">Credit Simulation</div>

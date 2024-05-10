@@ -54,8 +54,8 @@ table {
     --black-1: #000000;
     --black-2: #1a1a1d;
     --black-3: #323236;
-    --blue-1: #0F4C75;
-    --blue-2: #3282B8;
+    --blue-1: #03a3df;
+    --blue-2: #00b9ff;
     --blue-3: #BBE1FA;
     --white-1: #FFFFFF;
     --white-2: #FAFAFA;
@@ -70,7 +70,8 @@ table {
 }
 
 body {
-    font-family: "Titillium Web", sans-serif;
+    font-family: "Play", sans-serif;
+    background-color: var(--black-1);
 }
 
 a{
@@ -81,7 +82,7 @@ a{
 /* Logo */
 .logo {
     background-color: var(--black-1);
-    padding: 20px;
+    padding: 26px 30px;
 }
 
 .logo:hover {
@@ -122,16 +123,89 @@ nav .menu:hover {
 }
 /* END Navigation */
 
+/* Header */
+.header {
+    color: var(--blue-2);
+    font-weight: bold;
+    background-color: var(--black-1);
+    padding: 20px;
+    border-bottom: 1px solid var(--black-2);
+}
+
+.header .menu-title {
+    font-size: 60px;
+    padding: 20px;
+}
+
+.header .link {
+    text-align: right;
+    padding: 20px;
+    margin: auto;
+}
+
+.header .link a {
+    color: var(--black-3);
+}
+
+.header .link a:hover {
+    color: var(--white-1);
+}
+
+.header .link .active-link {
+    color: var(--white-1);
+}
+
+.header .link span {
+    margin-right: 20px;
+}
+/* END Header */
+
 /* Content */
 .content {
     padding-left: calc(var(--sidebar-width));
+    background-color: var(--black-1);
 }
 
 .item {
-    padding: 50px;
-    border: 1px solid var(--black-3);
+    padding: 20px 50px;
     color: var(--white-2);
     background-color: var(--black-1);
+    border-bottom: 1px;
+    border-right: 1px;
+    border-color: var(--black-2);
+    border-style: solid;
+}
+
+.item:hover {
+    background: rgb(0,185,255);
+    background: linear-gradient(0deg, rgba(0,185,255,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.item:hover .price {
+    color: var(--white-2);
+}
+
+.item:hover .strip {
+    display: inline-block;
+    height: 4px;
+    width: 20px;
+    background-color: var(--white-2);
+    margin: 0px 10px 3px 10px;
+}
+
+.item img {
+    width: 75%;
+}
+
+.item .model-name {
+    font-size: 32px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.item .price {
+    color: var(--black-3);
+    font-weight: bold;
 }
 /* END Content */
 

@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', Content::class);
-Route::get('/product', Product::class);
+Route::get('/product/{cat}', Product::class);
 Route::get('/simulation', Simulation::class);
 Route::get('/contact', Contact::class);
 Route::get('/about', About::class);

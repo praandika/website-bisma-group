@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="in-content" style="padding: 20px;">
+    <div class="in-content">
         <img src="{{ asset('img/banner/banner.png') }}" alt="Banner" class="img-fluid">
     </div>
 </div>
