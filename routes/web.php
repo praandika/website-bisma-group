@@ -1,9 +1,8 @@
 <?php
 
-use App\Http\Controllers\PageController;
+use App\Http\Controllers\HomeController;
 use App\Livewire\About;
 use App\Livewire\Contact;
-use App\Livewire\Content;
 use App\Livewire\Product;
 use App\Livewire\Simulation;
 use Illuminate\Support\Facades\Route;
@@ -23,7 +22,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', Content::class);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/product/search', [HomeController::class, 'search'])->name('search');
 Route::get('/product/{cat}', Product::class);
 Route::get('/simulation', Simulation::class);
 Route::get('/contact', Contact::class);

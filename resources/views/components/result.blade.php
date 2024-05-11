@@ -2,18 +2,10 @@
     <!-- Header -->
     <div class="header">
         <div class="row">
-            <div class="col-lg-4 col-md-12 menu-title">
-                {{ strToUpper($title) }}
+            <div class="col-lg-6 col-md-12 menu-title">
+                Search '{{ $title }}'
             </div>
-            <div class="col-lg-6 col-md-12 link">
-                <span><a href="/product/all" wire:navigate
-                        class="{{ Request::is('product/all') ? 'active-link' : '' }}">All</a></span>
-                @foreach($category as $o)
-                <span><a href="/product/{{ $o->category }}" wire:navigate
-                        class="{{ Request::is('product/'.$o->category.'') ? 'active-link' : '' }}">{{ strToupper($o->category) }}</a></span>
-                @endforeach
-            </div>
-            <div class="col-lg-2 col-md-12 search">
+            <div class="col-lg-6 col-md-12 search">
                 <x-search/>
             </div>
         </div>

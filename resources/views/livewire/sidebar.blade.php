@@ -2,7 +2,7 @@
     <div class="logo">
         <img src="{{ asset('img/logo-only.png') }}" alt="Bisma Group 1969" class="img-fluid">
     </div>
-    <a href="/" wire:navigate>
+    <a href="{{ route('home') }}">
         <div class="menu {{ Request::is('/') ? 'active' : '' }}">Home</div>
     </a>
     <a href="/product/all" wire:navigate>
