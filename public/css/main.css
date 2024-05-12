@@ -174,11 +174,7 @@ a {
 .logo {
     background-color: var(--black-1);
     padding: 26px 30px;
-}
-
-.logo:hover {
-    background-color: var(--blue-1);
-    cursor: pointer;
+    position: relative;
 }
 
 /* END Logo */
@@ -197,10 +193,7 @@ nav {
 
 nav .menu {
     padding: 15px 20px;
-}
-
-nav .menu:hover {
-    background-color: var(--blue-1);
+    position: relative;
 }
 
 .active {
@@ -212,6 +205,25 @@ nav .menu:hover {
 
 .active:hover {
     background-color: var(--black-1) !important;
+}
+
+nav .sidehover {
+    position: absolute;
+    width: 0px;
+    transition: width .5s ease-out;
+    z-index: -1;
+}
+
+nav .menu:hover .sidehover {
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--blue-1);
+}
+
+nav .logo:hover {
+    cursor: pointer;
 }
 
 /* END Navigation */

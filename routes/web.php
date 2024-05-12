@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Livewire\About;
 use App\Livewire\Contact;
 use App\Livewire\Product;
+use App\Livewire\ShowProduct;
 use App\Livewire\Simulation;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/product/search', [HomeController::class, 'search'])->name('search');
 Route::get('/product/{cat}', Product::class);
+Route::get('/product/{model}/show', ShowProduct::class);
 Route::get('/simulation', Simulation::class);
 Route::get('/contact', Contact::class);
 Route::get('/about', About::class);
