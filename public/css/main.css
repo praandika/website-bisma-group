@@ -367,6 +367,21 @@ input[type=text].search:focus {
     font-weight: bold;
 }
 
+.product-show {
+    position: relative;
+}
+
+.model-show {
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.model-info {
+    position: relative;
+    background-color: var(--black-3);
+    height: 800px;
+}
+
 /* END Content */
 
 /* Footer */
