@@ -15,10 +15,12 @@
         <div class="row">
             @forelse($data as $o)
             <div class="col-lg-4 col-md-6 col-sm-12 item">
-                <img src="{{ asset('img/motorcycle/'.$o->image.'') }}" class="img-fluid">
-                <p class="model-name">{{ $o->model_name }}</p>
-                <p class="price"><span class="strip"></span>Rp{{ number_format($o->price, 0, ',','.') }}<span
-                        class="strip"></span></p>
+                <a href="/product/{{ str_replace(' ', '_', $o->model_name) }}/show" wire:navigate>
+                    <img src="{{ asset('img/motorcycle/'.$o->image.'') }}" class="img-fluid">
+                    <p class="model-name">{{ $o->model_name }}</p>
+                    <p class="price"><span class="strip"></span>Rp{{ number_format($o->price, 0, ',','.') }}<span
+                            class="strip"></span></p>
+                </a>
             </div>
             @empty
             <div class="col-lg-4 col-md-6 col-sm-12 item">
