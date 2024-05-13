@@ -145,15 +145,16 @@ table {
     --black-1: #000000;
     --black-2: #1a1a1d;
     --black-3: #323236;
-    --blue-1: #03a3df;
-    --blue-2: #00b9ff;
+    --blue-1: #000ecc;
+    --blue-2: #0012ff;
     --blue-3: #BBE1FA;
     --white-1: #FFFFFF;
     --white-2: #FAFAFA;
     --red-1: #A91D3A;
     --red-2: #C73659;
     --red-3: #b94c66;
-
+    --background: rgba(0,17,255);
+    --background-gradient: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0,17,255,1) 100%);
 }
 
 * {
@@ -230,7 +231,7 @@ nav .logo:hover {
 
 /* Header */
 .header {
-    color: var(--blue-2);
+    color: var(--white-2);
     font-weight: bold;
     background-color: var(--black-1);
     padding: 20px;
@@ -290,8 +291,8 @@ input[type=text].search {
 input[type=text].search:focus {
     border: none;
     outline: none;
-    color: var(--blue-1);
 }
+
 /* END Header */
 
 /* Content */
@@ -317,18 +318,20 @@ input[type=text].search:focus {
 }
 
 .item img {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 }
 
 .item:hover {
-    background: rgb(0, 185, 255);
-    background: linear-gradient(0deg, rgba(0, 185, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: var(--background);
+    background: var(--background-gradient);
     opacity: 1;
 }
 
 .item:hover img {
-    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    -webkit-filter: grayscale(0%);
+    /* Safari 6.0 - 9.0 */
     filter: grayscale(0%);
 }
 
@@ -367,21 +370,56 @@ input[type=text].search:focus {
     font-weight: bold;
 }
 
-.product-show {
-    position: relative;
+.model-show {
+    top: 90px;
+    padding: 20px;
+    color: var(--white-2);
 }
 
-.model-show {
-    position: -webkit-sticky;
-    position: sticky;
+.model-show img {
+    padding: 50px;
+}
+
+.model-show .model-name {
+    font-size: 50px;
 }
 
 .model-info {
-    position: relative;
-    background-color: var(--black-3);
-    height: 800px;
+    color: var(--white-2);
+    padding: 20px;
 }
 
+.model-info h1 {
+    font-size: 30px;
+}
+
+.model-info .price {
+    font-weight: bold;
+}
+
+.model-spfc {
+    color: var(--white-2);
+    padding: 20px;
+}
+
+.warna-container {
+    padding: 10px;
+}
+
+button.warna {
+    border: none;
+    outline: 1px solid white;
+    outline-offset: 2px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.simulation-container {
+    padding: 20px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,17,255,1) 50%, rgba(0,0,0,1) 100%);
+}
 /* END Content */
 
 /* Footer */
