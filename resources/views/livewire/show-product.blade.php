@@ -25,7 +25,7 @@
             <div class="col-lg-4 col-md-12 model-show">
                 @forelse($data as $o)
                 <img src="{{ asset('img/motorcycle/'.$o->image.'') }}" class="img-fluid">
-                <p class="model-name">{{ $o->model_name }}</p>
+                <p class="model-name" id="getModel">{{ $o->model_name }}</p>
                 @empty
                 <p>No Data</p>
                 @endforelse
@@ -50,6 +50,7 @@
                 <livewire:credit-simulation/>
                 @foreach($data as $o)
                 <p class="price">Rp{{ number_format($o->price, 0, ',','.') }}</p>
+                <p style="display: none;" id="getPrice">{{ $o->price }}</p>
                 @endforeach
             </div>
         </div>
@@ -90,7 +91,11 @@
             document.querySelector("div.test-show img#" + warna + "").classList.add("show-img");
             return;
         }
+    </script>
 
+    <script>
+        localStorage.setItem("getModel", document.getElementById("getModel").innerHTML);
+        localStorage.setItem("getPrice", document.getElementById("getPrice").innerHTML);
     </script>
     @endpush
 </div>
