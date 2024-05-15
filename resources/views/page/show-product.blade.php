@@ -47,10 +47,10 @@
             </div>
 
             <div class="col-lg-8 col-md-12 model-info">
-                <livewire:credit-simulation/>
+                <x-credit-simulation />
                 @foreach($data as $o)
                 <p class="price">Rp{{ number_format($o->price, 0, ',','.') }}</p>
-                <p style="display: none;" id="getPrice">{{ $o->price }}</p>
+                <p style="display: block;" id="getPrice">{{ $o->price }}</p>
                 @endforeach
             </div>
         </div>
@@ -97,5 +97,13 @@
         localStorage.setItem("getModel", document.getElementById("getModel").innerHTML);
         localStorage.setItem("getPrice", document.getElementById("getPrice").innerHTML);
     </script>
+
+    <script>
+        document.getElementById("setModel").innerHTML = localStorage.getItem("getModel");
+        document.getElementById("angka_motor_menurun").innerHTML = localStorage.getItem("getPrice");
+        document.getElementById("setPriceStr").innerHTML = formatter.format(localStorage.getItem("getPrice"));
+    </script>
+
+    <script src="{{ asset('js/simul.js') }}"></script>
     @endpush
 </div>

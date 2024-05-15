@@ -83,8 +83,8 @@ function kredit_menurun() {
             admin = 1818000;
             bungaPerTahun = 0.21;
         } else {
-          alert("Please enter Rate value");
-          return false;
+            alert("Please enter Rate value");
+            return false;
         }
 
         let tenor12 = 12;

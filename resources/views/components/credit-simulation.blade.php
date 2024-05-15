@@ -48,13 +48,3 @@
         <p id="angsuran_menurun_48"></p>
     </div>
 </div>
-
-@push('after-js')
-<script src="{{ asset('js/simul.js') }}"></script>
-
-<script>
-    document.getElementById("setModel").innerHTML = localStorage.getItem("getModel");
-    document.getElementById("angka_motor_menurun").innerHTML = localStorage.getItem("getPrice");
-    document.getElementById("setPriceStr").innerHTML = formatter.format(localStorage.getItem("getPrice"));
-</script>
-@endpush
