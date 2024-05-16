@@ -6,31 +6,31 @@
     <a href="{{ route('home') }}">
         <div class="menu {{ Request::is('/') ? 'active' : '' }}">
             <div class="sidehover"></div>    
-            Home
+            <img src="{{ asset('img/ic-home.png') }}"><span>Home</span>
         </div>
     </a>
     <a href="/product/all" wire:navigate>
         <div class="menu {{ Request::is('product/*') ? 'active' : '' }}">
             <div class="sidehover"></div>    
-            Product
+            <img src="{{ asset('img/ic-scooter.png') }}"><span>Product</span>
         </div>
     </a>
     <a href="/simulation" wire:navigate>
         <div class="menu {{ Request::is('simulation') ? 'active' : '' }}">
             <div class="sidehover"></div>    
-            Credit Simulation
+            <img src="{{ asset('img/ic-calculator.png') }}"><span>Credit Simulation</span>
         </div>
     </a>
     <a href="/contact" wire:navigate>
         <div class="menu {{ Request::is('contact') ? 'active' : '' }}">
             <div class="sidehover"></div>    
-            Contact
+            <img src="{{ asset('img/ic-call.png') }}"><span>Contact</span>
         </div>
     </a>
     <a href="/about" wire:navigate>
         <div class="menu {{ Request::is('about') ? 'active' : '' }}">
             <div class="sidehover"></div>    
-            About Us
+            <img src="{{ asset('img/ic-about.png') }}"><span>About Us</span>
         </div>
     </a>
 </nav>

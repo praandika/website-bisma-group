@@ -145,16 +145,24 @@ table {
     --black-1: #000000;
     --black-2: #1a1a1d;
     --black-3: #323236;
-    --blue-1: #000ecc;
-    --blue-2: #0012ff;
+    --blue-1: #0d55a2;
+    --blue-2: #1e64b0;
     --blue-3: #BBE1FA;
     --white-1: #FFFFFF;
     --white-2: #FAFAFA;
     --red-1: #A91D3A;
     --red-2: #C73659;
     --red-3: #b94c66;
-    --background: rgba(0,17,255);
-    --background-gradient: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0,17,255,1) 100%);
+    --red-4: #ff003c;
+    --background: rgb(9, 80, 193);
+    --background-gradient: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(9, 80, 193,1) 100%);
+    --header-font: 60px;
+    --search-font: 20px;
+    --item-font: 32px;
+    --show-model-font: 40px;
+    --h1-font: 30px;
+    --spec-font: 25px;
+    --simulation-font: 28px;
 }
 
 * {
@@ -164,11 +172,19 @@ table {
 body {
     font-family: "Play", sans-serif;
     background-color: var(--black-1);
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
     color: var(--white-1);
+}
+
+.ornament {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0px 0px 7px 10px;
 }
 
 /* Logo */
@@ -193,14 +209,24 @@ nav {
 }
 
 nav .menu {
-    padding: 15px 20px;
+    padding: 10px 20px 22px 20px;
     position: relative;
+}
+
+nav .menu img {
+    width: 28px;
+    position: relative;
+    top: 8px;
+}
+
+nav .menu span {
+    margin-left: 10px;
 }
 
 .active {
     border-left: 5px solid var(--blue-1);
     background-color: var(--black-1);
-    padding: calc(20px - 5px) !important;
+    padding: 10px 20px 22px calc(20px - 5px) !important;
     color: var(--blue-2);
 }
 
@@ -243,7 +269,7 @@ nav .logo:hover {
 }
 
 .header .menu-title {
-    font-size: 60px;
+    font-size: var(--header-font);
     padding: 20px;
 }
 
@@ -275,7 +301,7 @@ nav .logo:hover {
 }
 
 input[type=text].search {
-    font-size: 20px;
+    font-size: var(--search-font);
     text-indent: 42px;
     padding: 10px;
     background-image: url('../img/ic-search.png');
@@ -303,6 +329,16 @@ input[type=text].search:focus {
 
 .slide-content {
     display: none;
+}
+
+.head-strip {
+    display: inline-block;
+    height: 4px;
+    width: 100px;
+    margin-top: 10px;
+    background-color: var(--red-4);
+    margin-bottom: 50px;
+    transition: all .8s ease-out;
 }
 
 .item {
@@ -344,14 +380,14 @@ input[type=text].search:focus {
     height: 4px;
     width: 0px;
     margin: 0px 10px 3px 10px;
-    transition: all 1s ease-out;
+    transition: all .8s ease-out;
 }
 
 .item:hover .strip {
     display: inline-block;
     height: 4px;
-    width: 30px;
-    background-color: var(--white-2);
+    width: 80px;
+    background-color: var(--red-4);
     margin: 0px 10px 3px 10px;
 }
 
@@ -360,7 +396,7 @@ input[type=text].search:focus {
 }
 
 .item .model-name {
-    font-size: 32px;
+    font-size: var(--item-font);
     font-weight: bold;
     padding: 20px 0;
 }
@@ -370,18 +406,29 @@ input[type=text].search:focus {
     font-weight: bold;
 }
 
+.model-container {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9, 80, 193, 0.245) 50%, rgba(9, 80, 193, 0.582) 100%);
+    padding: 40px 0px 0px 0px;
+}
+
+.model-container h1 {
+    font-size: var(--h1-font);
+    color: var(--white-1);
+}
+
 .model-show {
-    top: 90px;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
     color: var(--white-2);
 }
 
 .model-show img {
-    padding: 50px;
+    padding: 0px 50px 50px 50px;
 }
 
 .model-show .model-name {
-    font-size: 50px;
+    font-size: var(--show-model-font);
+    margin: -30px 0px 20px 0px;
 }
 
 .model-info {
@@ -390,7 +437,7 @@ input[type=text].search:focus {
 }
 
 .model-info h1 {
-    font-size: 30px;
+    font-size: var(--h1-font);
 }
 
 .model-info .price {
@@ -398,8 +445,28 @@ input[type=text].search:focus {
 }
 
 .model-spfc {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(9, 80, 193, 0.582) 0%, rgba(9, 80, 193, 0.245) 50%, rgba(0,0,0,1) 100%);
     color: var(--white-2);
-    padding: 20px;
+    padding: 40px 20px 20px 20px;
+}
+
+.model-spfc h1 {
+    font-size: var(--h1-font);
+}
+
+.model-spfc .spec {
+    padding: 50px 200px;
+    font-size: var(--spec-font);
+    text-align: left;
+}
+
+.model-spfc .spec table {
+    margin-bottom: 50px;
+}
+
+.model-spfc .spec table tr td{
+    padding: 15px;
 }
 
 .warna-container {
@@ -416,13 +483,97 @@ button.warna {
 }
 
 .simulation-container {
-    padding: 20px;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,17,255,1) 50%, rgba(0,0,0,1) 100%);
+    margin-top: -20px;
+    padding: 30px;
 }
 
 .simulation-container label {
     display: block;
+    margin-bottom: 8px;
+    color: #5a65ffc6;
+}
+
+.simulation-container span {
+    font-size: var(--simulation-font);
+}
+
+.simulation-container h1,
+.simulation-container .form-group {
+    margin-bottom: 40px;
+}
+
+.simulation-container select {
+    text-align: center;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px dashed #5a65ffc6;
+    font-size: var(--simulation-font);
+    background-color: transparent;
+    color: var(--white-1);
+}
+
+.simulation-container select option {
+    background-color: var(--black-1);
+}
+
+.simulation-container input {
+    font-size: var(--simulation-font);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--white-1);
+    background-color: transparent;
+    color: var(--white-1);
+    text-align: center;
+    transition: all .3s ease;
+}
+
+.simulation-container input:hover {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.simulation-container input:focus {
+    border-color: #5a65ffc6;
+}
+
+.simulation-container input::placeholder{
+    color: #5a65ffc6;
+}
+
+.simulation-container button {
+    outline: 1px solid #5a65ffc6;
+    outline-offset: 5px;
+    border: none;
+    font-size: var(--simulation-font);
+    padding: 15px;
+    background-color: #5a65ffc6;
+    color: var(--white-1);
+    margin-bottom: 20px;
+    transition: all .3s ease;
+}
+
+.simulation-container button:hover {
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #5a65fff1;
+}
+
+.simulation-container .angsuran {
+    border: 1px solid #5a65ffc6;
+    margin: 5px;
+    padding: 10px 5px;
+}
+
+.simulation-container .angsuran label {
+    color: var(--white-1);
+}
+
+.simulation-container .angsuran p {
+    font-size: 20px;
+    color: var(--white-1);
 }
 /* END Content */
 
@@ -484,12 +635,12 @@ footer .credit img {
 /* Animation */
 .swing-in-left-bck {
     -webkit-animation: swing-in-left-bck 0.6s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
-    animation: swing-in-left-bck 0.6s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+    animation: swing-in-left-bck 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
 }
 
 .flip-in-ver-right {
     -webkit-animation: flip-in-ver-right 2s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
-    animation: flip-in-ver-right 2s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
+    animation: flip-in-ver-right 1s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
 }
 
 .fade-in-bck {

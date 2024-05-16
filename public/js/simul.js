@@ -84,6 +84,7 @@ function kredit_menurun() {
             bungaPerTahun = 0.21;
         } else {
             alert("Please enter Rate value");
+            document.getElementById("bunga_menurun").style = "border: 1px solid red";
             return false;
         }
 
@@ -146,10 +147,39 @@ function kredit_menurun() {
         let rupiah_48 = formatter.format(angsuran_48);
 
         if ((!isNaN(angsuran_12)) || (!isNaN(angsuran_24)) || (!isNaN(angsuran_36)) || (!isNaN(angsuran_48))) {
-            document.getElementById("angsuran_menurun_12").innerHTML = "<h2 class='font_angsuran'>" + rupiah_12 + "</h2>";
-            document.getElementById("angsuran_menurun_24").innerHTML = "<h2 class='font_angsuran'>" + rupiah_24 + "</h2>";
-            document.getElementById("angsuran_menurun_36").innerHTML = "<h2 class='font_angsuran'>" + rupiah_36 + "</h2>";
-            document.getElementById("angsuran_menurun_48").innerHTML = "<h2 class='font_angsuran'>" + rupiah_48 + "</h2>";
+            document.getElementById("angsuran_menurun_12").innerHTML = `
+                <div class="angsuran swing-in-left-bck">
+                    <label for="">12 Bulan</label>
+                    <p>
+                        <h2>${rupiah_12}</h2>
+                    </p>
+                </div>
+            `;
+            document.getElementById("angsuran_menurun_24").innerHTML = `
+                <div class="angsuran flip-in-ver-right">
+                    <label for="">24 Bulan</label>
+                    <p>
+                        <h2>${rupiah_24}</h2>
+                    </p>
+                </div>
+            `;
+            document.getElementById("angsuran_menurun_36").innerHTML = `
+                <div class="angsuran swing-in-left-bck">
+                    <label for="">36 Bulan</label>
+                    <p>
+                        <h2>${rupiah_36}</h2>
+                    </p>
+                </div>
+            `;
+            document.getElementById("angsuran_menurun_48").innerHTML = `
+                <div class="angsuran flip-in-ver-right">
+                    <label for="">48 Bulan</label>
+                    <p>
+                        <h2>${rupiah_48}</h2>
+                    </p>
+                </div>
+            `;
+            document.getElementById("bunga_menurun").style = "border: none";
         } else {
             document.getElementById("angsuran_menurun_12").innerHTML = "<h2 style='color: #f490c3;'>Informasi Tidak Lengkap</h2>";
             document.getElementById("angsuran_menurun_24").innerHTML = "<h2 style='color: #f490c3;'>Informasi Tidak Lengkap</h2>";

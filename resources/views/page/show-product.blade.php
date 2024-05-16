@@ -1,6 +1,6 @@
 <div class="content">
     <!-- Header -->
-    <div class="header">
+    <div class="header" style="border: none;">
         <div class="row">
             <div class="col-lg-4 col-md-12 menu-title">
                 SHOW PRODUCT
@@ -22,64 +22,93 @@
 
     <div class="container-fluid text-center">
         <div class="row">
-            <div class="col-lg-4 col-md-12 model-show">
-                @forelse($data as $o)
-                <img src="{{ asset('img/motorcycle/'.$o->image.'') }}" class="img-fluid">
-                <p class="model-name" id="getModel">{{ $o->model_name }}</p>
-                @empty
-                <p>No Data</p>
-                @endforelse
+            <div class="col-md-12 model-container">
+                <h1>CREDIT SIMULATION</h1>
+                <span class="head-strip"></span>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 model-show">
+                        @forelse($data as $o)
+                        <img src="{{ asset('img/motorcycle/'.$o->image.'') }}" class="img-fluid img show-img"
+                            id="merah">
+                        <p class="model-name">{{ $o->model_name }}</p>
+                        @empty
+                        <p>No Data</p>
+                        @endforelse
 
-                <div class="test-show">
-                    <img src="https://images.pexels.com/photos/19598320/pexels-photo-19598320/free-photo-of-cathedral-basilica-in-leon-in-mexico.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        id="merah" class="img show-img">
-                    <img src="https://images.pexels.com/photos/23294313/pexels-photo-23294313/free-photo-of-an-aerial-view-of-a-small-house-with-a-red-light.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        id="biru" class="img ">
-                    <img src="https://images.pexels.com/photos/20103702/pexels-photo-20103702/free-photo-of-a-beach-with-people-walking-on-the-sand.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        id="kuning" class="img ">
+                        <div class="warna-container">
+                            <button class="warna" onclick="showImg('merah')"></button>
+                            <button class="warna" onclick="showImg('biru')"></button>
+                            <button class="warna" onclick="showImg('kuning')"></button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 col-md-12 model-info">
+                        @include('components.credit-simulation')
+                    </div>
                 </div>
-
-                <div class="warna-container">
-                    <button class="warna" onclick="showImg('merah')"></button>
-                    <button class="warna" onclick="showImg('biru')"></button>
-                    <button class="warna" onclick="showImg('kuning')"></button>
-                </div>
-            </div>
-
-            <div class="col-lg-8 col-md-12 model-info">
-                <x-credit-simulation />
-                @foreach($data as $o)
-                <p class="price">Rp{{ number_format($o->price, 0, ',','.') }}</p>
-                <p style="display: block;" id="getPrice">{{ $o->price }}</p>
-                @endforeach
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-12 model-spfc">
-                Model Spesifications
+                <h1>MODEL SPESIFICATIONS</h1>
+                <span class="head-strip"></span>
+                <div class="row">
+                    <div class="col-lg-12 spec">
+                        <ul>
+                            <li>Mesin</li>
+                            <table>
+                                <tr>
+                                    <td>ABC</td>
+                                    <td>: DEF</td>
+                                </tr>
+                                <tr>
+                                    <td>ABC</td>
+                                    <td>: DEF</td>
+                                </tr>
+                            </table>
+                            <li>Rangka</li>
+                            <table>
+                                <tr>
+                                    <td>ABC</td>
+                                    <td>: DEF</td>
+                                </tr>
+                                <tr>
+                                    <td>ABC</td>
+                                    <td>: DEF</td>
+                                </tr>
+                            </table>
+                            <li>Dimesin</li>
+                            <table>
+                                <tr>
+                                    <td>ABC</td>
+                                    <td>: DEF</td>
+                                </tr>
+                                <tr>
+                                    <td>ABC</td>
+                                    <td>: DEF</td>
+                                </tr>
+                            </table>
+                            <li>Kelistrikan</li>
+                            <table>
+                                <tr>
+                                    <td>ABC</td>
+                                    <td>: DEF</td>
+                                </tr>
+                                <tr>
+                                    <td>ABC</td>
+                                    <td>: DEF</td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
     <x-back-to-top />
-
-    @push('after-css')
-    <style>
-        .test-show img {
-            width: 300px;
-            display: none;
-        }
-
-        /* .test-show .hide-img {
-            display: none;
-        } */
-        .test-show .show-img {
-            display: block;
-        }
-
-    </style>
-    @endpush
 
     @push('after-js')
     <script>
@@ -91,17 +120,7 @@
             document.querySelector("div.test-show img#" + warna + "").classList.add("show-img");
             return;
         }
-    </script>
 
-    <script>
-        localStorage.setItem("getModel", document.getElementById("getModel").innerHTML);
-        localStorage.setItem("getPrice", document.getElementById("getPrice").innerHTML);
-    </script>
-
-    <script>
-        document.getElementById("setModel").innerHTML = localStorage.getItem("getModel");
-        document.getElementById("angka_motor_menurun").innerHTML = localStorage.getItem("getPrice");
-        document.getElementById("setPriceStr").innerHTML = formatter.format(localStorage.getItem("getPrice"));
     </script>
 
     <script src="{{ asset('js/simul.js') }}"></script>
