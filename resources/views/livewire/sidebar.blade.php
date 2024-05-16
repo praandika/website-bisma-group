@@ -15,6 +15,12 @@
             <img src="{{ asset('img/ic-scooter.png') }}"><span>Product</span>
         </div>
     </a>
+    <a href="/parts" wire:navigate>
+        <div class="menu {{ Request::is('parts') ? 'active' : '' }}">
+            <div class="sidehover"></div>    
+            <img src="{{ asset('img/ic-parts.png') }}"><span>Spare Parts</span>
+        </div>
+    </a>
     <a href="/simulation" wire:navigate>
         <div class="menu {{ Request::is('simulation') ? 'active' : '' }}">
             <div class="sidehover"></div>    
@@ -25,6 +31,18 @@
         <div class="menu {{ Request::is('contact') ? 'active' : '' }}">
             <div class="sidehover"></div>    
             <img src="{{ asset('img/ic-call.png') }}"><span>Contact</span>
+        </div>
+    </a>
+    <a href="/career" wire:navigate>
+        <div class="menu {{ Request::is('career') ? 'active' : '' }}">
+            <div class="sidehover"></div>    
+            <img src="{{ asset('img/ic-vacancy.png') }}"><span>Job Vacancy</span>
+        </div>
+    </a>
+    <a href="https://sosmed.yamahabismagroup.com" target="_blank">
+        <div class="menu {{ Request::is('socmed') ? 'active' : '' }}">
+            <div class="sidehover"></div>    
+            <img src="{{ asset('img/ic-socmed.png') }}"><span>Social Media</span>
         </div>
     </a>
     <a href="/about" wire:navigate>
