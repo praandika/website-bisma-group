@@ -4,8 +4,10 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ShowProductController;
 use App\Livewire\About;
 use App\Livewire\Contact;
+use App\Livewire\Job;
 use App\Livewire\Product;
 use App\Livewire\Simulation;
+use App\Livewire\Spareparts;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,8 +27,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/product/search', [HomeController::class, 'search'])->name('search');
+Route::post('/spart/search', [HomeController::class, 'searchSpart'])->name('search.spart');
 Route::get('/product/{cat}', Product::class);
+Route::get('/spart/{cat}', Spareparts::class);
 Route::get('/product/{model}/show', [ShowProductController::class, 'show'])->name('show');
 Route::get('/simulation', Simulation::class);
 Route::get('/contact', Contact::class);
+Route::get('/job', Job::class);
 Route::get('/about', About::class);

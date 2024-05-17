@@ -23,4 +23,16 @@ class HomeController extends Controller
         $title = $param->search;
         return view('page', compact('data', 'title'));
     }
+
+    public function searchSpart(Request $param) {
+        $year = Carbon::now()->format('Y');
+        $data =  DB::table('sparts')
+        ->where([
+            ['year_spart',$year],
+            ['spart_name', 'like', '%'.$param->search.'%']
+        ])
+        ->get();
+        $title = $param->search;
+        return view('page', compact('data', 'title'));
+    }
 }

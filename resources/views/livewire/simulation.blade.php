@@ -20,12 +20,12 @@
     </div>
     <!-- END Header -->
     
-    <div class="simulation-container simulation-single-page">
+    <div class="simulation-container simulation-single-page bg-pan-right">
         <form wire:submit="count">
             <div class="row form-group">
                 <div class="col-lg-6 col-md-12">
                     <label for="setModel">Model :</label>
-                    <input type="text" placeholder="Choose Model" wire:model="model">
+                    <input type="text" placeholder="Choose Model" wire:model="model" required>
                 </div>
 
                 <div class="col-lg-6 col-md-12">
@@ -60,7 +60,7 @@
             </div>
 
             <div class="col-lg-12">
-                <button type="submit">Check Credit</button>
+                <button type="submit" class="flip-in-ver-right">Check Credit</button>
             </div>
         </form>
 
@@ -70,7 +70,7 @@
                     <div class="angsuran swing-in-left-bck">
                         <label for="">12 Bulan</label>
                         <p>
-                            <h2>Rp{{ number_format($a12, 0, ',','.') }}</h2>
+                            <h2 class="slide-top">Rp{{ number_format($a12, 0, ',','.') }}</h2>
                         </p>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                     <div class="angsuran swing-in-left-bck">
                         <label for="">24 Bulan</label>
                         <p>
-                            <h2>Rp{{ number_format($a24, 0, ',','.') }}</h2>
+                            <h2 class="slide-top">Rp{{ number_format($a24, 0, ',','.') }}</h2>
                         </p>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                     <div class="angsuran swing-in-left-bck">
                         <label for="">36 Bulan</label>
                         <p>
-                            <h2>Rp{{ number_format($a36, 0, ',','.') }}</h2>
+                            <h2 class="slide-top">Rp{{ number_format($a36, 0, ',','.') }}</h2>
                         </p>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                     <div class="angsuran swing-in-left-bck">
                         <label for="">48 Bulan</label>
                         <p>
-                            <h2>Rp{{ number_format($a48, 0, ',','.') }}</h2>
+                            <h2 class="slide-top">Rp{{ number_format($a48, 0, ',','.') }}</h2>
                         </p>
                     </div>
                 </div>

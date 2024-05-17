@@ -1,6 +1,8 @@
 <x-layouts.app>
     @if(Route::is('search'))
         @include('components.result')
+    @elseif(Route::is('search.spart'))
+        @include('components.result')
     @elseif(Route::is('show'))
         @include('page.show-product')
     @else

@@ -15,8 +15,8 @@
             <img src="{{ asset('img/ic-scooter.png') }}"><span>Product</span>
         </div>
     </a>
-    <a href="/parts" wire:navigate>
-        <div class="menu {{ Request::is('parts') ? 'active' : '' }}">
+    <a href="/spart/all" wire:navigate>
+        <div class="menu {{ Request::is('spart/all') ? 'active' : '' }}">
             <div class="sidehover"></div>    
             <img src="{{ asset('img/ic-parts.png') }}"><span>Spare Parts</span>
         </div>
@@ -33,8 +33,8 @@
             <img src="{{ asset('img/ic-call.png') }}"><span>Contact</span>
         </div>
     </a>
-    <a href="/career" wire:navigate>
-        <div class="menu {{ Request::is('career') ? 'active' : '' }}">
+    <a href="/job" wire:navigate>
+        <div class="menu {{ Request::is('job') ? 'active' : '' }}">
             <div class="sidehover"></div>    
             <img src="{{ asset('img/ic-vacancy.png') }}"><span>Job Vacancy</span>
         </div>

@@ -323,7 +323,7 @@ input[type=text].search:focus {
 
 /* Content */
 .content {
-    padding-left: calc(var(--sidebar-width));
+    padding-left: var(--sidebar-width);
     background-color: var(--black-1);
 }
 
@@ -404,6 +404,40 @@ input[type=text].search:focus {
 .item .price {
     color: var(--black-3);
     font-weight: bold;
+}
+
+.item button.order {
+    font-size: 20px;
+    margin-top: 20px;
+    background-color: var(--black-2);
+    border: none;
+    color: var(--black-3);
+    padding: 5px 10px;
+    transition: all .2s ease;
+}
+
+.item:hover button.order {
+    outline: 1px solid var(--blue-1);
+    outline-offset: 5px;
+    background-color: var(--red-2);
+    color: var(--white-1);
+}
+
+.item button.order:hover {
+    background-color: var(--blue-1);
+    outline: 1px solid var(--red-1);
+    outline-offset: 5px;
+}
+
+.item .order img {
+    display: inline;
+    width: 20px;
+    margin-right: 10px;
+    filter: invert(80%);
+}
+
+.item:hover .order img {
+    filter: invert(0%);
 }
 
 .model-container {
@@ -579,11 +613,75 @@ button.warna {
 .simulation-container.simulation-single-page {
     text-align: center;
     color: var(--white-1);
-    background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgba(9, 80, 193, 0.582) 20%, rgba(9, 80, 193, 0.245) 80%, rgba(0, 0, 0, 1) 100%);
+    background-color: rgba(9, 80, 193, 0.582);
     padding-top: 50px;
 }
 
+.team {
+    text-align: center;
+    padding: 20px;
+}
+
+.maps {
+    text-align: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: calc(50% - var(--sidebar-width) + 125px);
+    padding: 20px;
+}
+
+.contact h1 {
+    font-size: var(--h1-font);
+    color: var(--white-1);
+}
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 75%;
+}
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    border: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.card-team {
+    position: relative;
+    padding: 0px 20px 0px 20px;
+}
+
+.card-team img {
+    opacity: 0.5;
+    transition: all 1s ease-in-out;
+}
+
+.card-team .phone {
+    position: relative;
+    padding: 15px;
+    background-color: var(--blue-1);
+    top: -115px;
+    left: -10px;
+    width: 70%;
+    font-weight: bold;
+    transform: skew(-8deg) translate(-1px,0px);
+    -webkit-transform: skew(-8deg) translate(-1px,0px);
+    -moz-transform: skew(-8deg) translate(-1px,0px);
+}
+
+.card-team .phone-name {
+    position: relative;
+    padding: 20px;
+    background-color: var(--red-2);
+    top: -5px;
+}
+
+.card-team:hover img {
+    opacity: 1;
+}
 /* END Content */
 
 /* Footer */
@@ -665,6 +763,31 @@ footer .credit img {
 .slide-top {
     -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-left {
+    -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-right {
+    -webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.bg-pan-right {
+    -webkit-animation: bg-pan-right 20s infinite both;
+    animation: bg-pan-right 20s infinite both;
+}
+
+.bg-change-color {
+    -webkit-animation: bg-change-color 10s infinite both;
+    animation: bg-change-color 10s infinite both;
+}
+
+.bg-change-color-2 {
+    -webkit-animation: bg-change-color-2 10s infinite both;
+    animation: bg-change-color-2 10s infinite both;
 }
 
 /* ----------------------------------------------
@@ -873,5 +996,215 @@ footer .credit img {
     }
 }
 
+/**
+ * ----------------------------------------
+ * animation slide-left
+ * ----------------------------------------
+ */
 
+@-webkit-keyframes slide-left {
+    0% {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-right
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-5-17 9:52:31
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation bg-pan-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes bg-pan-right {
+    0% {
+        background-color: rgba(9, 80, 193, 0.582);
+    }
+
+    25% {
+        background-color: rgba(9, 18, 193, 0.397);
+    }
+
+    50% {
+        background-color: rgba(64, 9, 193, 0.254);
+    }
+
+    75% {
+        background-color: rgba(9, 18, 193, 0.397);
+    }
+
+    100% {
+        background-color: rgba(9, 80, 193, 0.582);
+    }
+}
+
+@keyframes bg-pan-right {
+    0% {
+        background-color: rgba(9, 80, 193, 0.582);
+    }
+
+    25% {
+        background-color: rgba(9, 18, 193, 0.397);
+    }
+
+    50% {
+        background-color: rgba(64, 9, 193, 0.254);
+    }
+
+    75% {
+        background-color: rgba(9, 18, 193, 0.397);
+    }
+
+    100% {
+        background-color: rgba(9, 80, 193, 0.582);
+    }
+}
+
+/* ------------------------
+ *       Andika CSS
+ *------------------------*/
+
+@-webkit-keyframes bg-change-color {
+    0% {
+        background-color: var(--blue-1)
+    }
+
+    25% {
+        background-color: var(--blue-2)
+    }
+
+    50% {
+        background-color: var(--red-2)
+    }
+
+    75% {
+        background-color: var(--blue-2)
+    }
+
+    100% {
+        background-color: var(--blue-1)
+    }
+}
+
+@keyframes bg-change-color {
+    0% {
+        background-color: var(--blue-1)
+    }
+
+    25% {
+        background-color: var(--blue-2)
+    }
+
+    50% {
+        background-color: var(--red-2)
+    }
+
+    75% {
+        background-color: var(--blue-2)
+    }
+
+    100% {
+        background-color: var(--blue-1)
+    }
+}
+
+/* ------------------------
+ *       Andika CSS
+ *------------------------*/
+
+@-webkit-keyframes bg-change-color-2 {
+    0% {
+        background-color: var(--red-2)
+    }
+
+    25% {
+        background-color: var(--red-3)
+    }
+
+    50% {
+        background-color: var(--blue-1)
+    }
+
+    75% {
+        background-color: var(--red-3)
+    }
+
+    100% {
+        background-color: var(--red-2)
+    }
+}
+
+@keyframes bg-change-color-2 {
+    0% {
+        background-color: var(--red-2)
+    }
+
+    25% {
+        background-color: var(--red-3)
+    }
+
+    50% {
+        background-color: var(--blue-1)
+    }
+
+    75% {
+        background-color: var(--red-3)
+    }
+
+    100% {
+        background-color: var(--red-2)
+    }
+}
 /* END Animation */
