@@ -154,6 +154,10 @@ table {
     --red-2: #C73659;
     --red-3: #b94c66;
     --red-4: #ff003c;
+    --green-1: #006769;
+    --green-2: #40A578;
+    --green-3: #9DDE8B;
+    --green-4: #E6FF94;
     --background: rgb(9, 80, 193);
     --background-gradient: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(9, 80, 193, 1) 100%);
     --header-font: 60px;
@@ -631,6 +635,33 @@ button.warna {
     padding: 20px;
 }
 
+.jingle {
+    text-align: center;
+    padding: 20px;
+    color: var(--white-1);
+}
+
+.lyrics {
+    margin-top: 20px;
+}
+
+.lyrics p {
+    padding: 20px;
+}
+
+.visimisi {
+    padding: 0px 50px;
+    color: var(--white-1);
+}
+
+.visimisi p:first-child {
+    padding-top: 0px;
+}
+
+.visimisi p {
+    padding: 20px;
+}
+
 .contact h1 {
     font-size: var(--h1-font);
     color: var(--white-1);
@@ -641,6 +672,7 @@ button.warna {
     overflow: hidden;
     padding-top: 75%;
 }
+
 .iframe-container iframe {
     position: absolute;
     top: 0;
@@ -648,6 +680,22 @@ button.warna {
     height: 100%;
     width: 100%;
 }
+
+.iframe-container-about {
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+.iframe-container-about iframe {
+    position: absolute;
+    top: 0;
+    border: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
 
 .card-team {
     position: relative;
@@ -667,9 +715,9 @@ button.warna {
     left: -10px;
     width: 70%;
     font-weight: bold;
-    transform: skew(-8deg) translate(-1px,0px);
-    -webkit-transform: skew(-8deg) translate(-1px,0px);
-    -moz-transform: skew(-8deg) translate(-1px,0px);
+    transform: skew(-8deg) translate(-1px, 0px);
+    -webkit-transform: skew(-8deg) translate(-1px, 0px);
+    -moz-transform: skew(-8deg) translate(-1px, 0px);
 }
 
 .card-team .phone-name {
@@ -682,6 +730,71 @@ button.warna {
 .card-team:hover img {
     opacity: 1;
 }
+
+.job-name {
+    font-size: 30px;
+}
+
+.qualification {
+    text-align: left;
+    margin-top: -20px;
+}
+
+.qualification table tr td,
+.qualification table tr th {
+    padding: 8px;
+}
+
+.qualification table th {
+    font-size: 20px;
+}
+
+.jobdesc {
+    text-align: left;
+    margin-top: 10px;
+    height: 200px;
+}
+
+.jobdesc .table-head {
+    font-size: 20px;
+    padding: 8px;
+}
+
+.jobdesc .description {
+    padding: 8px;
+    overflow-y: auto;
+    height: 150px;
+}
+
+.table-head {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(9, 80, 193, 0.582) 0%, rgba(9, 80, 193, 0.245) 50%, transparent 100%);
+    transition: all 1s ease;
+}
+
+.item:hover .table-head {
+    background: var(--red-1);
+    background: linear-gradient(90deg, var(--red-1) 0%, var(--red-2) 50%, transparent 100%);
+}
+
+button.apply {
+    outline: 1px solid var(--green-3);
+    outline-offset: 5px;
+    border: none;
+    background-color: var(--green-2);
+    padding: 10px 30px;
+    color: var(--black-1);
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all .2s ease;
+    margin-bottom: 20px;
+}
+
+button.apply:hover {
+    background-color: var(--green-3);
+    outline: 1px solid var(--green-1);
+}
+
 /* END Content */
 
 /* Footer */
@@ -763,6 +876,11 @@ footer .credit img {
 .slide-top {
     -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-bottom {
+    -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .slide-left {
@@ -998,6 +1116,35 @@ footer .credit img {
 
 /**
  * ----------------------------------------
+ * animation slide-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+/**
+ * ----------------------------------------
  * animation slide-left
  * ----------------------------------------
  */
@@ -1207,4 +1354,5 @@ footer .credit img {
         background-color: var(--red-2)
     }
 }
+
 /* END Animation */

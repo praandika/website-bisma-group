@@ -22,7 +22,7 @@
                     <p class="price"><span class="strip"></span>Rp{{ number_format($o->price, 0, ',','.') }}<span
                             class="strip"></span></p>
                 </a>
-                @elseif
+                @elseif(Request::is('spart'))
                 <a href="#">
                     <img src="{{ asset('img/motorcycle/noimage.jpg') }}" class="img-fluid">
                     <p class="model-name">Parts Name</p>
@@ -32,6 +32,16 @@
                         <img src="{{ asset('img/ic-order.png') }}">Order Parts
                     </button>
                 </a>
+                @elseif(Request::is('job'))
+                <a href="#">
+                    <p class="job-name">Job Name</p>
+                    <p class="qualification"><span class="strip"></span>- Cantik<span
+                            class="strip"></span></p>
+                    <button class="apply">
+                        <img src="{{ asset('img/ic-order.png') }}">Apply Now
+                    </button>
+                </a>
+                @endif
             </div>
             @empty
             <div class="col-lg-4 col-md-6 col-sm-12 item">
