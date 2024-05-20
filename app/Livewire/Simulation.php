@@ -103,18 +103,12 @@ class Simulation extends Component
 
     public function render()
     {
-        $year = Carbon::now()->format('Y');
-        $category = DB::table('units')
-        ->where('year_mc',$year)
-        ->groupBy('category')
-        ->get();
-
         $a12 = $this->a12;
         $a24 = $this->a24;
         $a36 = $this->a36;
         $a48 = $this->a48;
         
 
-        return view('livewire.simulation', compact('category','a12','a24','a36','a48'))->title('Credit Simulation');
+        return view('livewire.simulation', compact('a12','a24','a36','a48'))->title('Credit Simulation');
     }
 }
