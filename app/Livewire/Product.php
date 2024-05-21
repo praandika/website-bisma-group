@@ -13,7 +13,6 @@ class Product extends Component
     public $title;
 
     public function mount($cat) {
-        $year = Carbon::now()->format('Y');
         if ($cat == 'all') {
             $client = new Client();
             $url = "http://127.0.0.1:8000/api/zhismodel";
