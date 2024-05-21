@@ -3,42 +3,38 @@
 namespace App\Livewire;
 
 use Carbon\Carbon;
+use GuzzleHttp\Client;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
 class Spareparts extends Component
 {
-    // public $product;
-    // public $title;
-    // public $categoryLink;
+    public $parts;
+    public $title;
+    public $categoryLink;
 
-    // public function mount($cat) {
-    //     $year = Carbon::now()->format('Y');
-    //     if ($cat == 'all') {
-    //         $this->product = DB::table('sparts')
-    //         ->where('year_spart',$year)
-    //         ->groupBy('spart_name')
-    //         ->get();
-    //     } else {
-    //         $this->product = DB::table('sparts')
-    //         ->where([
-    //             ['year_spart',$year],
-    //             ['category',$cat]
-    //         ])
-    //         ->groupBy('spart_name')
-    //         ->get();
-    //     }
+    public function mount($cat) {
+        if ($cat == 'all') {
+            $client = new Client();
+            $url = "http://127.0.0.1:8000/api/zhisparts";
+            $response = $client->request('GET', $url);
+            $content = json_decode($response->getBody()->getContents(), true);
+            $this->parts = $content['data'];
+        } else {
+            $client = new Client();
+            $url = "http://127.0.0.1:8000/api/zhisparts/".$cat;
+            $response = $client->request('GET', $url);
+            $content = json_decode($response->getBody()->getContents(), true);
+            $this->parts = $content['data'];
+        }
 
-    //     $this->categoryLink = DB::table('sparts')
-    //     ->where('year_spart',$year)
-    //     ->groupBy('category')
-    //     ->get();
-
-    //     $this->title = ($cat == 'all') ? 'All Sparts' : $cat ;
-    // }
+        $this->title = ($cat == 'all') ? 'All Sparts' : $cat ;
+    }
 
     public function render()
     {
-        return view('livewire.spareparts');
+        $data = $this->parts;
+        $title = $this->title;
+        return view('livewire.spareparts', compact('data', 'title'))->title($title);
     }
 }
