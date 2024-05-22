@@ -7,7 +7,7 @@
                 <div class="col-lg-6">
                     <a href="#">
                         <div class="card-team slide-left">
-                            <img src="{{ asset('img/motorcycle/noimage.jpg') }}" class="img-fluid">
+                            <img src="http://127.0.0.1:8000/img/motorcycle/noimage.jpg" class="img-fluid">
                             <div class="phone-name bg-change-color-2">
                                 Yamaha Bisma Dalung
                             </div>
@@ -20,7 +20,7 @@
                 <div class="col-lg-6">
                     <a href="#">
                         <div class="card-team slide-left">
-                            <img src="{{ asset('img/motorcycle/noimage.jpg') }}" class="img-fluid">
+                            <img src="http://127.0.0.1:8000/img/motorcycle/noimage.jpg" class="img-fluid">
                             <div class="phone-name bg-change-color-2">
                                 Yamaha Bisma Dalung
                             </div>
@@ -33,7 +33,7 @@
                 <div class="col-lg-6">
                     <a href="#">
                         <div class="card-team slide-left">
-                            <img src="{{ asset('img/motorcycle/noimage.jpg') }}" class="img-fluid">
+                            <img src="http://127.0.0.1:8000/img/motorcycle/noimage.jpg" class="img-fluid">
                             <div class="phone-name bg-change-color-2">
                                 Yamaha Bisma Dalung
                             </div>
@@ -46,7 +46,7 @@
                 <div class="col-lg-6">
                     <a href="#">
                         <div class="card-team slide-left">
-                            <img src="{{ asset('img/motorcycle/noimage.jpg') }}" class="img-fluid">
+                            <img src="http://127.0.0.1:8000/img/motorcycle/noimage.jpg" class="img-fluid">
                             <div class="phone-name bg-change-color-2">
                                 Yamaha Bisma Dalung
                             </div>
@@ -59,7 +59,7 @@
                 <div class="col-lg-6">
                     <a href="#">
                         <div class="card-team slide-left">
-                            <img src="{{ asset('img/motorcycle/noimage.jpg') }}" class="img-fluid">
+                            <img src="http://127.0.0.1:8000/img/motorcycle/noimage.jpg" class="img-fluid">
                             <div class="phone-name bg-change-color-2">
                                 Yamaha Bisma Dalung
                             </div>
@@ -72,7 +72,7 @@
                 <div class="col-lg-6">
                     <a href="#">
                         <div class="card-team slide-left">
-                            <img src="{{ asset('img/motorcycle/noimage.jpg') }}" class="img-fluid">
+                            <img src="http://127.0.0.1:8000/img/motorcycle/noimage.jpg" class="img-fluid">
                             <div class="phone-name bg-change-color-2">
                                 Yamaha Bisma Dalung
                             </div>

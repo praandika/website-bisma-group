@@ -462,6 +462,11 @@ input[type=text].search:focus {
 
 .model-show img {
     padding: 0px 50px 50px 50px;
+    display: none;
+}
+
+.model-show .image-container img.show-img {
+    display: block;
 }
 
 .model-show .model-name {

@@ -39,7 +39,7 @@
             <img src="{{ asset('img/ic-vacancy.png') }}"><span>Job Vacancy</span>
         </div>
     </a>
-    <a href="https://sosmed.yamahabismagroup.com" target="_blank">
+    <a href="https://yamahabismagroup.com/sosmed" target="_blank">
         <div class="menu {{ Request::is('socmed') ? 'active' : '' }}">
             <div class="sidehover"></div>    
             <img src="{{ asset('img/ic-socmed.png') }}"><span>Social Media</span>

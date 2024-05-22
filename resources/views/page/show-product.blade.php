@@ -5,14 +5,7 @@
             <div class="col-lg-4 col-md-12 menu-title">
                 SHOW PRODUCT
             </div>
-            <div class="col-lg-6 col-md-12 link">
-                <span><a href="/product/all" wire:navigate
-                        class="{{ Request::is('product/all') ? 'active-link' : '' }}">All</a></span>
-                @foreach($category as $o)
-                <span><a href="/product/{{ $o->category }}" wire:navigate
-                        class="{{ Request::is('product/'.$o->category.'') ? 'active-link' : '' }}">{{ strToupper($o->category) }}</a></span>
-                @endforeach
-            </div>
+            <livewire:links/>
             <div class="col-lg-2 col-md-12 search">
                 <x-search />
             </div>
@@ -27,18 +20,22 @@
                 <span class="head-strip flip-in-ver-right"></span>
                 <div class="row">
                     <div class="col-lg-4 col-md-12 model-show">
-                        @forelse($data as $o)
-                        <img src="{{ asset('img/motorcycle/'.$o->image.'') }}" class="img-fluid slide-in-left img show-img"
-                            id="merah">
-                        <p class="model-name swing-in-left-bck">{{ $o->model_name }}</p>
-                        @empty
-                        <p>No Data</p>
-                        @endforelse
+                        @foreach($image as $o)
+                        <div class="image-container">
+                            <img src="http://127.0.0.1:8000/img/motorcycle/{{ $o['image'] }}" class="img-fluid slide-in-left img {{ $o['index'] == 0 ? 'show-img' : '' }}"
+                            id="{{ $o['color_name'] }}">
+                        </div>
+                        @endforeach
+
+                        <p class="model-name swing-in-left-bck">{{ $model }}</p>
 
                         <div class="warna-container">
-                            <button class="warna swing-in-left-bck" onclick="showImg('merah')"></button>
-                            <button class="warna swing-in-left-bck" onclick="showImg('biru')"></button>
-                            <button class="warna swing-in-left-bck" onclick="showImg('kuning')"></button>
+                            @foreach($color as $o)
+                            <button class="warna swing-in-left-bck" 
+                            onclick="showImg('{{ str_replace(' ', '_', $o['color_name']) }}')"
+                            style="background-color: {{ $o['color_code'] }};"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="{{ $o['color_name'] }}"></button>
+                            @endforeach
                         </div>
                     </div>
 
@@ -117,7 +114,7 @@
             for (let i = 0; i < image.length; i++) {
                 document.getElementsByClassName("img")[i].classList.remove("show-img");
             }
-            document.querySelector("div.test-show img#" + warna + "").classList.add("show-img");
+            document.querySelector("div.image-container img#" + warna + "").classList.add("show-img");
             return;
         }
 
