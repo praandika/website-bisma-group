@@ -512,6 +512,12 @@ input[type=text].search:focus {
     padding: 15px;
 }
 
+.model-spfc .spec table tr th {
+    padding: 30px 15px;
+    background: var(--red-1);
+    background: linear-gradient(90deg, var(--red-1) 0%, var(--red-2) 50%, transparent 100%);
+}
+
 .warna-container {
     padding: 10px;
 }
@@ -699,8 +705,6 @@ button.warna {
     height: 100%;
     width: 100%;
 }
-
-
 
 .card-team {
     position: relative;

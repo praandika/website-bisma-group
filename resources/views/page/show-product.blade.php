@@ -5,7 +5,7 @@
             <div class="col-lg-4 col-md-12 menu-title">
                 SHOW PRODUCT
             </div>
-            <livewire:links/>
+            <livewire:links />
             <div class="col-lg-2 col-md-12 search">
                 <x-search />
             </div>
@@ -22,8 +22,9 @@
                     <div class="col-lg-4 col-md-12 model-show">
                         @foreach($image as $o)
                         <div class="image-container">
-                            <img src="http://127.0.0.1:8000/img/motorcycle/{{ $o['image'] }}" class="img-fluid slide-in-left img {{ $o['index'] == 0 ? 'show-img' : '' }}"
-                            id="{{ $o['color_name'] }}">
+                            <img src="http://127.0.0.1:8000/img/motorcycle/{{ $o['image'] }}"
+                                class="img-fluid slide-in-left img {{ $o['index'] == 0 ? 'show-img' : '' }}"
+                                id="{{ $o['color_name'] }}">
                         </div>
                         @endforeach
 
@@ -31,10 +32,10 @@
 
                         <div class="warna-container">
                             @foreach($color as $o)
-                            <button class="warna swing-in-left-bck" 
-                            onclick="showImg('{{ str_replace(' ', '_', $o['color_name']) }}')"
-                            style="background-color: {{ $o['color_code'] }};"
-                            data-bs-toggle="tooltip" data-bs-placement="top" title="{{ $o['color_name'] }}"></button>
+                            <button class="warna swing-in-left-bck"
+                                onclick="showImg('{{ str_replace(' ', '_', $o['color_name']) }}')"
+                                style="background-color: {{ $o['color_code'] }};" data-bs-toggle="tooltip"
+                                data-bs-placement="top" title="{{ $o['color_name'] }}"></button>
                             @endforeach
                         </div>
                     </div>
@@ -52,55 +53,54 @@
                 <span class="head-strip flip-in-ver-right"></span>
                 <div class="row">
                     <div class="col-lg-12 spec">
-                        <ul>
-                            <li>Mesin</li>
-                            <table>
-                                <tr>
-                                    <td>ABC</td>
-                                    <td>: DEF</td>
-                                </tr>
-                                <tr>
-                                    <td>ABC</td>
-                                    <td>: DEF</td>
-                                </tr>
-                            </table>
-                            <li>Rangka</li>
-                            <table>
-                                <tr>
-                                    <td>ABC</td>
-                                    <td>: DEF</td>
-                                </tr>
-                                <tr>
-                                    <td>ABC</td>
-                                    <td>: DEF</td>
-                                </tr>
-                            </table>
-                            <li>Dimesin</li>
-                            <table>
-                                <tr>
-                                    <td>ABC</td>
-                                    <td>: DEF</td>
-                                </tr>
-                                <tr>
-                                    <td>ABC</td>
-                                    <td>: DEF</td>
-                                </tr>
-                            </table>
-                            <li>Kelistrikan</li>
-                            <table>
-                                <tr>
-                                    <td>ABC</td>
-                                    <td>: DEF</td>
-                                </tr>
-                                <tr>
-                                    <td>ABC</td>
-                                    <td>: DEF</td>
-                                </tr>
-                            </table>
-                        </ul>
+                        <table>
+                            <tr>
+                                <th>
+                                    Mesin
+                                </th>
+                            </tr>
+                            @foreach($mesin as $oTitle => $oSpec)
+                            <tr>
+                                <td>{{ $oTitle }}</td>
+                                <td>: {{ $oSpec }}</td>
+                            </tr>
+                            @endforeach
+                            <tr>
+                                <th>
+                                    Rangka
+                                </th>
+                            </tr>
+                            @foreach($rangka as $oTitle => $oSpec)
+                            <tr>
+                                <td>{{ $oTitle }}</td>
+                                <td>: {{ $oSpec }}</td>
+                            </tr>
+                            @endforeach
+                            <tr>
+                                <th>
+                                    Dimesin
+                                </th>
+                            </tr>
+                            @foreach($dimensi as $oTitle => $oSpec)
+                            <tr>
+                                <td>{{ $oTitle }}</td>
+                                <td>: {{ $oSpec }}</td>
+                            </tr>
+                            @endforeach
+                            <tr>
+                                <th>
+                                    Kelistrikan
+                                </th>
+                            </tr>
+                            @foreach($kelistrikan as $oTitle => $oSpec)
+                            <tr>
+                                <td>{{ $oTitle }}</td>
+                                <td>: {{ $oSpec }}</td>
+                            </tr>
+                            @endforeach
+                        </table>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

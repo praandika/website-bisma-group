@@ -5,34 +5,35 @@
             <div class="col-lg-4 col-md-12 menu-title">
                 {{ strToUpper($title) }}
             </div>
-            <livewire:linkspareparts/>
+            <livewire:linkspareparts />
             <div class="col-lg-2 col-md-12 search">
-                <x-search/>
+                <x-search />
             </div>
         </div>
     </div>
     <!-- END Header -->
     <div class="container-fluid text-center">
         <div class="row">
-        @forelse($data as $o)
+            @forelse($data as $o)
             <div class="col-lg-4 col-md-6 col-sm-12 item">
                 <a href="#">
                     <img src="http://127.0.0.1:8000/img/sparepart/{{ $o['image'] }}" class="img-fluid">
                     <p class="model-name">{{ $o['parts_name'] }}</p>
-                    <p class="price"><span class="strip"></span>Rp{{ $o['price'] }}<span
-                            class="strip"></span></p>
+                    <p class="price"><span class="strip"></span>Rp{{ $o['price'] }}<span class="strip"></span></p>
+
                     <button class="order">
                         <img src="{{ asset('img/ic-order.png') }}">Order Parts
                     </button>
+
                 </a>
             </div>
-        @empty
+            @empty
             <div class="col-lg-4 col-md-6 col-sm-12 item">
                 <p>No Data</p>
             </div>
-        @endforelse
+            @endforelse
         </div>
     </div>
 
-    <x-back-to-top/>
+    <x-back-to-top />
 </div>
