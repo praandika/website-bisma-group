@@ -2,9 +2,7 @@
 
 namespace App\Livewire;
 
-use Carbon\Carbon;
 use GuzzleHttp\Client;
-use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
 class Product extends Component

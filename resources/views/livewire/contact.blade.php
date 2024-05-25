@@ -4,84 +4,21 @@
             <h1 class="slide-top">SALES TEAM</h1>
             <span class="head-strip flip-in-ver-right"></span>
             <div class="row">
+                @foreach($data as $o)
                 <div class="col-lg-6">
-                    <a href="#">
+                    <a href="https://wa.me/{{ $o['phone2'] }}?text=Hai%20saya%20ingin%20info%20sepeda%20motor%20yamaha%20(https://127.0.0.1:8001)" target="_blank">
                         <div class="card-team slide-left">
-                            <img src="http://127.0.0.1:8000/img/motorcycle/noimage.jpg" class="img-fluid">
+                            <img src="http://127.0.0.1:8000/img/dealer/{{ $o['image'] }}" class="img-fluid">
                             <div class="phone-name bg-change-color-2">
-                                Yamaha Bisma Dalung
+                                {{ $o['dealer_name'] }}
                             </div>
                             <div class="phone bg-change-color">
-                                {{ implode('-', str_split('081246571421', 4)); }}
+                                +{{ implode('-', str_split($o['phone2'], 5)); }}
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-6">
-                    <a href="#">
-                        <div class="card-team slide-left">
-                            <img src="http://127.0.0.1:8000/img/motorcycle/noimage.jpg" class="img-fluid">
-                            <div class="phone-name bg-change-color-2">
-                                Yamaha Bisma Dalung
-                            </div>
-                            <div class="phone bg-change-color">
-                                {{ implode('-', str_split('081246571421', 4)); }}
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-6">
-                    <a href="#">
-                        <div class="card-team slide-left">
-                            <img src="http://127.0.0.1:8000/img/motorcycle/noimage.jpg" class="img-fluid">
-                            <div class="phone-name bg-change-color-2">
-                                Yamaha Bisma Dalung
-                            </div>
-                            <div class="phone bg-change-color">
-                                {{ implode('-', str_split('081246571421', 4)); }}
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-6">
-                    <a href="#">
-                        <div class="card-team slide-left">
-                            <img src="http://127.0.0.1:8000/img/motorcycle/noimage.jpg" class="img-fluid">
-                            <div class="phone-name bg-change-color-2">
-                                Yamaha Bisma Dalung
-                            </div>
-                            <div class="phone bg-change-color">
-                                {{ implode('-', str_split('081246571421', 4)); }}
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-6">
-                    <a href="#">
-                        <div class="card-team slide-left">
-                            <img src="http://127.0.0.1:8000/img/motorcycle/noimage.jpg" class="img-fluid">
-                            <div class="phone-name bg-change-color-2">
-                                Yamaha Bisma Dalung
-                            </div>
-                            <div class="phone bg-change-color">
-                                {{ implode('-', str_split('081246571421', 4)); }}
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-6">
-                    <a href="#">
-                        <div class="card-team slide-left">
-                            <img src="http://127.0.0.1:8000/img/motorcycle/noimage.jpg" class="img-fluid">
-                            <div class="phone-name bg-change-color-2">
-                                Yamaha Bisma Dalung
-                            </div>
-                            <div class="phone bg-change-color">
-                                {{ implode('-', str_split('081246571421', 4)); }}
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="col-lg-6 maps">

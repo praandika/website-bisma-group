@@ -29,9 +29,10 @@
     <!-- END Header -->
     <div class="container-fluid text-center">
         <div class="row">
+            @forelse($data as $o)
             <div class="col-lg-4 col-md-6 col-sm-12 item">
                 <a href="#">
-                    <p class="job-name slide-top">Job Name</p>
+                    <p class="job-name slide-top">{{ $o['title'] }}</p>
                     <span class="head-strip flip-in-ver-right"></span>
                     <div class="qualification slide-left">
                         <table>
@@ -39,24 +40,8 @@
                                 <th class="table-head">Qualification</th>
                             </tr>
                             <tr>
-                                <td>- Lorem ipsum</td>
+                                <td>{{ $o['qualification'] }}</td>
                             </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-
                         </table>
                     </div>
 
@@ -66,8 +51,7 @@
                         </div>
                         <div class="description">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat asperiores, quasi
-                                accusamus odio amet delectus magnam iure dolorem tempora quia, perferendis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate dicta ipsam explicabo deleniti vel voluptatem, eum, quaerat hic earum natus eaque magni, adipisci nisi quidem aperiam? Excepturi reprehenderit sunt earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sint velit nihil fuga nemo aliquam esse, repellendus assumenda ut ratione consequatur, ducimus iste soluta repudiandae tenetur! Velit deserunt veritatis sit.
+                                {{ $o['jobdesc'] }}
                             </p>
                         </div>
                     </div>
@@ -77,238 +61,13 @@
                     </button>
                 </a>
             </div>
+            @empty
             <div class="col-lg-4 col-md-6 col-sm-12 item">
                 <a href="#">
-                    <p class="job-name slide-top">Job Name</p>
-                    <span class="head-strip flip-in-ver-right"></span>
-                    <div class="qualification slide-left">
-                        <table>
-                            <tr>
-                                <th class="table-head">Qualification</th>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-                    <div class="jobdesc slide-right">
-                        <div class="table-head">
-                            Jobdesc
-                        </div>
-                        <div class="description">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat asperiores, quasi
-                                accusamus odio amet delectus magnam iure dolorem tempora quia, perferendis
-                            </p>
-                        </div>
-                    </div>
-
-                    <button class="apply slide-bottom">
-                        Apply Now
-                    </button>
+                    <p>No Data Available</p>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 item">
-                <a href="#">
-                    <p class="job-name slide-top">Job Name</p>
-                    <span class="head-strip flip-in-ver-right"></span>
-                    <div class="qualification slide-left">
-                        <table>
-                            <tr>
-                                <th class="table-head">Qualification</th>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-                    <div class="jobdesc slide-right">
-                        <div class="table-head">
-                            Jobdesc
-                        </div>
-                        <div class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat asperiores, quasi
-                                accusamus odio amet delectus magnam iure dolorem tempora quia, perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deserunt sunt, enim rerum dicta odio, nulla deleniti, voluptatem vel officiis id a debitis iste hic ad asperiores illo consequatur beatae?
-                        </div>
-                    </div>
-
-                    <button class="apply slide-bottom">
-                        Apply Now
-                    </button>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 item">
-                <a href="#">
-                    <p class="job-name slide-top">Job Name</p>
-                    <span class="head-strip flip-in-ver-right"></span>
-                    <div class="qualification slide-left">
-                        <table>
-                            <tr>
-                                <th class="table-head">Qualification</th>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-                    <div class="jobdesc slide-right">
-                        <div class="table-head">
-                            Jobdesc
-                        </div>
-                        <div class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat asperiores, quasi
-                                accusamus odio amet delectus magnam iure dolorem tempora quia, perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deserunt sunt, enim rerum dicta odio, nulla deleniti, voluptatem vel officiis id a debitis iste hic ad asperiores illo consequatur beatae?
-                        </div>
-                    </div>
-
-                    <button class="apply slide-bottom">
-                        Apply Now
-                    </button>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 item">
-                <a href="#">
-                    <p class="job-name slide-top">Job Name</p>
-                    <span class="head-strip flip-in-ver-right"></span>
-                    <div class="qualification slide-left">
-                        <table>
-                            <tr>
-                                <th class="table-head">Qualification</th>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-                    <div class="jobdesc slide-right">
-                        <div class="table-head">
-                            Jobdesc
-                        </div>
-                        <div class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat asperiores, quasi
-                                accusamus odio amet delectus magnam iure dolorem tempora quia, perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deserunt sunt, enim rerum dicta odio, nulla deleniti, voluptatem vel officiis id a debitis iste hic ad asperiores illo consequatur beatae?
-                        </div>
-                    </div>
-
-                    <button class="apply slide-bottom">
-                        Apply Now
-                    </button>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 item">
-                <a href="#">
-                    <p class="job-name slide-top">Job Name</p>
-                    <span class="head-strip flip-in-ver-right"></span>
-                    <div class="qualification slide-left">
-                        <table>
-                            <tr>
-                                <th class="table-head">Qualification</th>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-                            <tr>
-                                <td>- Lorem ipsum</td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-                    <div class="jobdesc slide-right">
-                        <div class="table-head">
-                            Jobdesc
-                        </div>
-                        <div class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat asperiores, quasi
-                                accusamus odio amet delectus magnam iure dolorem tempora quia, perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deserunt sunt, enim rerum dicta odio, nulla deleniti, voluptatem vel officiis id a debitis iste hic ad asperiores illo consequatur beatae?
-                        </div>
-                    </div>
-
-                    <button class="apply slide-bottom">
-                        Apply Now
-                    </button>
-                </a>
-            </div>
+            @endforelse
         </div>
     </div>
 
