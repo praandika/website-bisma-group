@@ -652,12 +652,45 @@ button.warna {
     color: var(--white-1);
 }
 
+.jingle p {
+    line-height: 1.5;
+}
+
+.jingle table {
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.jingle table tr td {
+    padding: 5px;
+}
+
+.jingle a {
+    color: #f56892;
+    font-weight: bold;
+}
+
+.jingle a i {
+    margin-left: 3px;
+    font-size: 12px;
+}
+
 .lyrics {
     margin-top: 20px;
+    text-align: left;
+    font-size: 20px;
 }
 
 .lyrics p {
     padding: 20px;
+}
+
+.lyrics h2 {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(9, 80, 193, 0.582) 0%, rgba(9, 80, 193, 0.245) 50%, rgba(0, 0, 0, 1) 100%);
+    padding: 10px;
 }
 
 .visimisi {
@@ -671,6 +704,13 @@ button.warna {
 
 .visimisi p {
     padding: 20px;
+    line-height: 1.5;
+}
+
+.visimisi h1 {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(9, 80, 193, 0.582) 0%, rgba(9, 80, 193, 0.245) 50%, rgba(0, 0, 0, 1) 100%);
+    padding: 10px;
 }
 
 .contact h1 {
@@ -822,6 +862,10 @@ footer .link {
 
 footer .link a:hover {
     color: var(--red-2);
+}
+
+footer .link a.active-footer {
+    color: var(--blue-2);
 }
 
 footer .credit {

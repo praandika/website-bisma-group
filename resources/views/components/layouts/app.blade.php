@@ -15,6 +15,7 @@
         @stack('before-css')
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
         @stack('after-css')
+        <script src="https://kit.fontawesome.com/f7d1a663d2.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <livewire:sidebar/>
