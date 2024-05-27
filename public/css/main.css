@@ -844,6 +844,40 @@ button.apply:hover {
     outline: 1px solid var(--green-1);
 }
 
+.cta {
+    position: relative;
+    padding: 20px;
+    background-color: var(--black-1);
+    height: 500px;
+}
+
+.search-home {
+    position: relative;
+    top: -50px;
+    padding: 50px 50px 35px 50px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(6, 66, 163) 0%, rgba(0, 0, 0, 1) 100%);
+    width: 80%;
+}
+
+.search-home input {
+    font-size: var(--simulation-font) !important;
+    padding: 13px !important;
+    background-color: var(--black-1) !important;
+}
+
+.search-home button {
+    border: none;
+    font-size: var(--simulation-font);
+    padding: 15px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, var(--red-1) 0%, #550515 100%);
+    color: var(--white-1);
+    margin-bottom: 20px;
+    transition: all .3s ease;
+    width: 100%;
+}
+
 /* END Content */
 
 /* Footer */
