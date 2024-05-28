@@ -477,6 +477,19 @@ input[type=text].search:focus {
     margin: -30px 0px 20px 0px;
 }
 
+.model-call-container {
+    position: relative;
+
+    /* The image used */
+    height: min-content;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .model-call {
     color: var(--white-2);
     padding: 20px;
@@ -490,6 +503,8 @@ input[type=text].search:focus {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+    font-size: 25px;
+    cursor: context-menu;
 }
 
 .model-call table tr th,
@@ -512,16 +527,25 @@ input[type=text].search:focus {
 
 .model-call table tr td.action {
     text-align: center;
+    transition: all .8s ease;
 }
 
 .model-call p {
-    font-size: 12px;
+    font-size: 18px;
     color: var(--red-1);
 }
 
 .model-call table i {
-    font-size: 30px;
     color: var(--green-2);
+}
+
+.model-call table tr td.action:hover i {
+    color: #ffffff;
+}
+
+.model-call table tr td.action:hover {
+    background-color: var(--green-2);
+    cursor: pointer;
 }
 
 .model-info {
@@ -707,7 +731,7 @@ button.warna {
 }
 
 .jingle table {
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: auto;
     text-align: left;
     margin-bottom: 10px;
@@ -788,6 +812,7 @@ button.warna {
     overflow: hidden;
     padding-top: 56.25%;
 }
+
 .iframe-container-about iframe {
     position: absolute;
     top: 0;
@@ -942,6 +967,20 @@ button.apply:hover {
 .sosmed {
     display: inline-block;
     margin: 5px 15px;
+}
+
+.modal-body,
+.modal-footer {
+    background-color: var(--blue-4) !important;
+    border-radius: 0px;
+    border: none;
+}
+
+.modal-header {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, #550515 0%, var(--red-1) 100%);
+    border-radius: 0px;
+    border: none;
 }
 
 /* END Content */

@@ -3,7 +3,7 @@
     <div class="header" style="border: none;">
         <div class="row">
             <div class="col-lg-4 col-md-12 menu-title">
-                SHOW PRODUCT
+                SIMULATION
             </div>
             <livewire:links />
             <div class="col-lg-2 col-md-12 search">

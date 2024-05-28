@@ -32,30 +32,42 @@ class ShowProductController extends Controller
             array_push($image[$i], $image[$i]['index'] = $i);
         }
 
-        $mesin = new Client();
+        $dealerClient = new Client();
+        $dealerUrl = "http://127.0.0.1:8000/api/zhisavailable/$model";
+        $dealerResponse = $dealerClient->request('GET', $dealerUrl);
+        $dealerContent = json_decode($dealerResponse->getBody()->getContents(), true);
+        $dealer = $dealerContent['data'];
+
+        $acolorClient = new Client();
+        $acolorUrl = "http://127.0.0.1:8000/api/zhisavailablecolor/$model";
+        $acolorResponse = $acolorClient->request('GET', $acolorUrl);
+        $acolorContent = json_decode($acolorResponse->getBody()->getContents(), true);
+        $acolor = $acolorContent['data'];
+
+        $mesinClient = new Client();
         $mesinUrl = "http://127.0.0.1:8000/api/zhisspecmesin/$model";
-        $mesinResponse = $mesin->request('GET', $mesinUrl);
+        $mesinResponse = $mesinClient->request('GET', $mesinUrl);
         $mesinContent = json_decode($mesinResponse->getBody()->getContents(), true);
-        $mesin = json_decode($mesinContent['data'][0]['mesin'], true);
+        $mesin = ($mesinContent['data'] != null) ? json_decode($mesinContent['data'][0]['mesin'], true) : 'No data available' ;
 
-        $rangka = new Client();
+        $rangkaClient = new Client();
         $rangkaUrl = "http://127.0.0.1:8000/api/zhisspecrangka/$model";
-        $rangkaResponse = $rangka->request('GET', $rangkaUrl);
+        $rangkaResponse = $rangkaClient->request('GET', $rangkaUrl);
         $rangkaContent = json_decode($rangkaResponse->getBody()->getContents(), true);
-        $rangka = json_decode($rangkaContent['data'][0]['rangka'], true);
+        $rangka = ($rangkaContent['data'] != null) ? json_decode($rangkaContent['data'][0]['rangka'], true) : 'No data available' ;
 
-        $dimensi = new Client();
+        $dimensiClient = new Client();
         $dimensiUrl = "http://127.0.0.1:8000/api/zhisspecdimensi/$model";
-        $dimensiResponse = $dimensi->request('GET', $dimensiUrl);
+        $dimensiResponse = $dimensiClient->request('GET', $dimensiUrl);
         $dimensiContent = json_decode($dimensiResponse->getBody()->getContents(), true);
-        $dimensi = json_decode($dimensiContent['data'][0]['dimensi'], true);
+        $dimensi = ($dimensiContent['data'] != null) ? json_decode($dimensiContent['data'][0]['dimensi'], true) : 'No data available' ;
 
-        $kelistrikan = new Client();
+        $kelistrikanClient = new Client();
         $kelistrikanUrl = "http://127.0.0.1:8000/api/zhisspeckelistrikan/$model";
-        $kelistrikanResponse = $kelistrikan->request('GET', $kelistrikanUrl);
+        $kelistrikanResponse = $kelistrikanClient->request('GET', $kelistrikanUrl);
         $kelistrikanContent = json_decode($kelistrikanResponse->getBody()->getContents(), true);
-        $kelistrikan = json_decode($kelistrikanContent['data'][0]['kelistrikan'], true);
+        $kelistrikan = ($kelistrikanContent['data'] != null) ? json_decode($kelistrikanContent['data'][0]['kelistrikan'], true) : 'No data available' ;
 
-        return view('page', compact('data', 'price','title','color','model','image','mesin','rangka','dimensi','kelistrikan'));
+        return view('page', compact('data', 'price','title','color','model','image','mesin','rangka','dimensi','kelistrikan','dealer','acolor'));
     }
 }

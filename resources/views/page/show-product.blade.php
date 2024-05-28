@@ -47,7 +47,8 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row model-call-container"
+            style="background-image: url('{{ asset('img/featured/parallax3.png') }}');">
             <div class="col-md-12 model-call">
                 <h1 class="slide-top">AVAILABLE AT :</h1>
                 <span class="head-strip flip-in-ver-right"></span>
@@ -55,19 +56,28 @@
                     <tr>
                         <th>Dealer</th>
                         <th>Address</th>
+                        <th>Stock</th>
                         <th>Contact</th>
                     </tr>
+                    @forelse($dealer as $o)
                     <tr>
-                        <td class="data">Yamaha Bisma Sunset Road</td>
-                        <td class="data">Jl. Sunset Road No.162, Legian, Kec. Kuta, Kabupaten Badung</td>
+                        <td class="data">{{ $o['dealer_name'] }}</td>
+                        <td class="data">{{ $o['address'] }}</td>
+                        <td class="data">Available</td>
                         <td class="action">
-                            <a href="#" target="_blank">
+                            <a href="https://wa.me/{{ $o['whatsapp'] }}" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </a>
                         </td>
                     </tr>
+                    @empty
+                    <tr>
+                        <td colspan="3">Out of Stocks!</td>
+                    </tr>
+                    @endforelse
                 </table>
                 <br>
+
                 <p>*Ketersediaan dapat berubah sewaktu-waktu berdasarkan penjualan yang sedang berlangsung</p>
             </div>
         </div>
@@ -84,45 +94,72 @@
                                     Mesin
                                 </th>
                             </tr>
+                            @if($mesin == 'No data available')
+                            <tr>
+                                <td>{{ $mesin }}</td>
+                            </tr>
+                            @else
                             @foreach($mesin as $oTitle => $oSpec)
                             <tr>
                                 <td>{{ $oTitle }}</td>
                                 <td>: {{ $oSpec }}</td>
                             </tr>
                             @endforeach
+                            @endif
+
                             <tr>
                                 <th>
                                     Rangka
                                 </th>
                             </tr>
+                            @if($rangka == 'No data available')
+                            <tr>
+                                <td>{{ $rangka }}</td>
+                            </tr>
+                            @else
                             @foreach($rangka as $oTitle => $oSpec)
                             <tr>
                                 <td>{{ $oTitle }}</td>
                                 <td>: {{ $oSpec }}</td>
                             </tr>
                             @endforeach
+                            @endif
+
                             <tr>
                                 <th>
                                     Dimesin
                                 </th>
                             </tr>
+                            @if($dimensi == 'No data available')
+                            <tr>
+                                <td>{{ $dimensi }}</td>
+                            </tr>
+                            @else
                             @foreach($dimensi as $oTitle => $oSpec)
                             <tr>
                                 <td>{{ $oTitle }}</td>
                                 <td>: {{ $oSpec }}</td>
                             </tr>
                             @endforeach
+                            @endif
+
                             <tr>
                                 <th>
                                     Kelistrikan
                                 </th>
                             </tr>
+                            @if($kelistrikan == 'No data available')
+                            <tr>
+                                <td>{{ $kelistrikan }}</td>
+                            </tr>
+                            @else
                             @foreach($kelistrikan as $oTitle => $oSpec)
                             <tr>
                                 <td>{{ $oTitle }}</td>
                                 <td>: {{ $oSpec }}</td>
                             </tr>
                             @endforeach
+                            @endif
                         </table>
                     </div>
                 </div>
