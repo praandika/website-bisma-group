@@ -846,9 +846,15 @@ button.apply:hover {
 
 .cta {
     position: relative;
-    padding: 20px;
+    padding: 20px 20px 50px 20px;
     background-color: var(--black-1);
-    height: 500px;
+    text-align: center;
+    width: 80%;
+}
+
+.cta h1 {
+    font-size: var(--h1-font);
+    color: var(--white-1);
 }
 
 .search-home {
@@ -876,6 +882,16 @@ button.apply:hover {
     margin-bottom: 20px;
     transition: all .3s ease;
     width: 100%;
+}
+
+.search-home button:hover {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, #550515 0%, var(--red-1) 100%);
+}
+
+.sosmed {
+    display: inline-block;
+    margin: 5px 15px;
 }
 
 /* END Content */

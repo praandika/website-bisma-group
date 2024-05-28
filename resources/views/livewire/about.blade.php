@@ -6,6 +6,8 @@
             <div class="row">
                 <div class="col-lg-12 visimisi">
                     <h1>History</h1>
+                    <br>
+                    <img src="{{ asset('img/bisma69.jpeg') }}" class="img-fluid" style="outline: 5px double #D4AF37; outline-offset: 5px;" width="97%">
                     @foreach ($data as $o)
                     <p>
                         {{ $o['profile'] }}
@@ -20,6 +22,8 @@
                         {{ $o['misi'] }}
                     </p>
                     @endforeach
+                    <img src="{{ asset('img/gajahmada.jpg') }}" class="img-fluid" width="50%" style="outline: 5px double #D4AF37; outline-offset: 5px;">
+                    <p>Jalan Gajah Mada Denpasar Tempo Doeloe</p>
                 </div>
             </div>
         </div>
