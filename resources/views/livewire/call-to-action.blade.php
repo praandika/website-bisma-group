@@ -19,8 +19,8 @@
             <div class="col-md-12">
                 <div class="sosmed">
                     <a href="https://www.instagram.com/yamaha_bisma/" target="_blank">
-                        <img src="{{ asset('img/ic-instagram-color.png') }}" class="img-fluid">
-                        <p style="color: #B82E5D;">
+                        <img src="{{ asset('img/ic-instagram-color-darken.png') }}" class="img-fluid">
+                        <p style="color: #D9DBDB;">
                             @yamaha_bisma
                         </p>
                     </a>
@@ -35,32 +35,40 @@
                 </div>
                 <div class="sosmed">
                     <a href="https://www.facebook.com/profile.php?id=61550018206862" target="_blank">
-                        <img src="{{ asset('img/ic-facebook-color.png') }}" class="img-fluid">
-                        <p style="color: #075DA4;">
+                        <img src="{{ asset('img/ic-facebook-color-darken.png') }}" class="img-fluid">
+                        <p style="color: #D9DBDB;">
                             Yamaha Bisma
                         </p>
                     </a>
                 </div>
                 <div class="sosmed">
                     <a href="https://www.youtube.com/@yamaha_bisma" target="_blank">
-                        <img src="{{ asset('img/ic-youtube-color.png') }}" class="img-fluid">
-                        <p style="color: #BA1F1F;">
+                        <img src="{{ asset('img/ic-youtube-color-darken.png') }}" class="img-fluid">
+                        <p style="color: #D9DBDB;">
                             Yamaha Bisma
                         </p>
                     </a>
                 </div>
                 <div class="sosmed">
                     <a href="/contact" target="_blank">
-                        <img src="{{ asset('img/ic-whatsapp-color.png') }}" class="img-fluid">
-                        <p style="color: #17881C;">
+                        <img src="{{ asset('img/ic-whatsapp-color-darken.png') }}" class="img-fluid">
+                        <p style="color: #D9DBDB;">
                             Official Whatsapp
                         </p>
                     </a>
                 </div>
                 <div class="sosmed">
+                    <a href="mailto:crm.bismagroup@gmail.com?subject=Buying%20Consultation%20from%20Website" target="_blank">
+                        <img src="{{ asset('img/ic-email-color-darken.png') }}" class="img-fluid">
+                        <p style="color: #D9DBDB;">
+                            E-Mail
+                        </p>
+                    </a>
+                </div>
+                <div class="sosmed">
                     <a href="https://www.google.com/maps/d/edit?mid=1v8s4jkMnxQ660jzGPOzedIMhWN47H7w&usp=sharing" target="_blank">
-                        <img src="{{ asset('img/ic-location-color.png') }}" class="img-fluid">
-                        <p style="color: #FF3C00;">
+                        <img src="{{ asset('img/ic-location-color-darken.png') }}" class="img-fluid">
+                        <p style="color: #D9DBDB;">
                             Our Locations
                         </p>
                     </a>

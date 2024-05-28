@@ -48,6 +48,31 @@
         </div>
 
         <div class="row">
+            <div class="col-md-12 model-call">
+                <h1 class="slide-top">AVAILABLE AT :</h1>
+                <span class="head-strip flip-in-ver-right"></span>
+                <table>
+                    <tr>
+                        <th>Dealer</th>
+                        <th>Address</th>
+                        <th>Contact</th>
+                    </tr>
+                    <tr>
+                        <td class="data">Yamaha Bisma Sunset Road</td>
+                        <td class="data">Jl. Sunset Road No.162, Legian, Kec. Kuta, Kabupaten Badung</td>
+                        <td class="action">
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <p>*Ketersediaan dapat berubah sewaktu-waktu berdasarkan penjualan yang sedang berlangsung</p>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-md-12 model-spfc">
                 <h1 class="slide-top">MODEL SPESIFICATIONS</h1>
                 <span class="head-strip flip-in-ver-right"></span>

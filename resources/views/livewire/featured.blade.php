@@ -182,9 +182,9 @@
     @endpush
 
     <!-- ============================================================Featured============================================================ -->
-    <div class="featured" style="background-image: url('{{ asset('img/featured/parallax1.png') }}'); margin-top: -5px">
+    <div class="featured" style="background-image: url('{{ asset('img/featured/parallax2.png') }}'); margin-top: -5px">
         <div class="featured-wrap featured-desktop">
-            <img src="{{ asset('img/featured/filano-lux-silver.png') }}" class="img-fluid">
+            <img src="{{ asset('img/featured/filano-neo-dull-blue.png') }}" class="img-fluid">
             <div class="contentFeatured">
                 <div class="pulse-btn pulse" id="smartKey" onmouseover="showSmartKey()" onmouseout="hideSmartKey()">
                 </div>

@@ -145,15 +145,18 @@ table {
     --black-1: #000000;
     --black-2: #1a1a1d;
     --black-3: #323236;
+    --black-4: #161618;
     --blue-1: #0d55a2;
     --blue-2: #1e64b0;
     --blue-3: #BBE1FA;
+    --blue-4: #00254d;
     --white-1: #FFFFFF;
     --white-2: #FAFAFA;
     --red-1: #A91D3A;
     --red-2: #C73659;
     --red-3: #b94c66;
     --red-4: #ff003c;
+    --red-5: #4d0000;
     --green-1: #006769;
     --green-2: #40A578;
     --green-3: #9DDE8B;
@@ -472,6 +475,53 @@ input[type=text].search:focus {
 .model-show .model-name {
     font-size: var(--show-model-font);
     margin: -30px 0px 20px 0px;
+}
+
+.model-call {
+    color: var(--white-2);
+    padding: 20px;
+}
+
+.model-call h1 {
+    font-size: var(--h1-font);
+}
+
+.model-call table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.model-call table tr th,
+.model-call table tr td {
+    padding: 20px;
+}
+
+.model-call table tr th {
+    background-color: var(--blue-4);
+    border-bottom: 6px solid var(--black-1);
+}
+
+.model-call table tr td {
+    background-color: var(--black-4);
+}
+
+.model-call table tr td {
+    border-bottom: 6px solid var(--black-1);
+}
+
+.model-call table tr td.action {
+    text-align: center;
+}
+
+.model-call p {
+    font-size: 12px;
+    color: var(--red-1);
+}
+
+.model-call table i {
+    font-size: 30px;
+    color: var(--green-2);
 }
 
 .model-info {
