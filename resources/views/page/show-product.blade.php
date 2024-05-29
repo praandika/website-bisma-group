@@ -72,7 +72,7 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="3">Out of Stocks!</td>
+                        <td colspan="4" style="text-align: center;">Out of Stocks!</td>
                     </tr>
                     @endforelse
                 </table>

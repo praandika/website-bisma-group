@@ -18,13 +18,13 @@
             <div class="row form-group">
                 <div class="col-lg-6 col-md-12">
                     <label for="setModel">Model :</label>
-                    <input type="text" placeholder="Choose Model" wire:model="model" required>
+                    <input type="text" placeholder="Choose Model" wire:model="model" data-bs-toggle="modal" data-bs-target="#modalUnit" id="modelName" required>
                 </div>
 
                 <div class="col-lg-6 col-md-12">
                     <label for="setPriceStr">OTR Price :</label>
                     <input type="number" placeholder="On The Road Price" id="angka_motor_menurun">
-                    <input type="hidden">
+                    <input type="hidden" id="price">
                 </div>
             </div>
 
@@ -107,6 +107,8 @@
             </p>
         </div>
     </div>
+
+    <livewire:modal-unit />
 </div>
 
 @push('after-js')

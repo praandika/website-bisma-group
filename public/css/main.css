@@ -522,7 +522,7 @@ input[type=text].search:focus {
 }
 
 .model-call table tr td {
-    border-bottom: 6px solid var(--black-1);
+    border-bottom: 6px solid transparent;
 }
 
 .model-call table tr td.action {
@@ -971,18 +971,36 @@ button.apply:hover {
 
 .modal-body,
 .modal-footer {
-    background-color: var(--blue-4) !important;
+    background-color: #ffffff !important;
     border-radius: 0px;
     border: none;
 }
 
 .modal-header {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, #550515 0%, var(--red-1) 100%);
+    background-color: var(--blue-4) !important;
     border-radius: 0px;
     border: none;
+    color: #ffffff !important;
 }
 
+.modal-body .container {
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.modal-body .container p .harga {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.modal-body .container:hover {
+    background: rgb(0,37,77);
+    background: linear-gradient(0deg, rgba(0,37,77,1) 0%, rgba(13,85,162,1) 100%);
+    color: #ffffff;
+}
 /* END Content */
 
 /* Footer */
