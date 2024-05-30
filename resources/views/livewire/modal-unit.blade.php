@@ -1,7 +1,3 @@
-@push('after-css')
-<link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
-@endpush
-
 <!-- Modal -->
 <div class="modal modal-xl fade" id="modalUnit" tabindex="-1" aria-labelledby="modalUnitLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -13,8 +9,7 @@
             <div class="modal-body">
                 <div class="row">
                     @forelse($data as $o)
-
-                    <div class="col-lg-4 col-md-4 container">
+                    <div class="col-lg-4 col-md-4 container pilihUnit" data-unit="{{ $o['model_name'] }}" data-price="{{ $o['price'] }}">
                         <div class="image">
                             <img src="http://127.0.0.1:8000/img/motorcycle/{{ $o['image'] }}" class="img-fluid"
                                 width="200px">
@@ -27,10 +22,15 @@
                                 </span>
                             </p>
                         </div>
-
                     </div>
-
                     @empty
+                    <div class="col-lg-12 col-md-12 container" class="pilihUnit">
+                        <div class="model_name">
+                            <p>
+                                No Data Available
+                            </p>
+                        </div>
+                    </div>
                     @endforelse
                 </div>
             </div>
@@ -42,12 +42,13 @@
 </div>
 
 @push('after-js')
-<script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
 <script>
-    $(document).ready(function () {
-        $('#myTable').DataTable();
+    $(document).on('click', '.pilihUnit', function (e) {
+        $('#price').val($(this).attr('data-price'));
+        $('#modelName').val($(this).attr('data-unit'));
+        $('#modalUnit').modal('hide');
     });
-
 </script>
 @endpush
