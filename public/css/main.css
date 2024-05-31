@@ -213,6 +213,7 @@ nav {
     background-color: var(--black-2);
     font-weight: bold;
     text-transform: uppercase;
+    z-index: 999;
 }
 
 nav .menu {

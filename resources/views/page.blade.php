@@ -7,6 +7,8 @@
         @include('components.result')
     @elseif(Route::is('show'))
         @include('page.show-product')
+    @elseif(Route::is('simulation'))
+        @include('page.simulation')
     @else
         <livewire:content/>
     @endif

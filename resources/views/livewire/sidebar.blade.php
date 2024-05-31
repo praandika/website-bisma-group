@@ -21,7 +21,7 @@
             <img src="{{ asset('img/ic-parts.png') }}"><span>Spare Parts</span>
         </div>
     </a>
-    <a href="/simulation" wire:navigate>
+    <a href="{{ route('simulation') }}">
         <div class="menu {{ Request::is('simulation') ? 'active' : '' }}">
             <div class="sidehover"></div>    
             <img src="{{ asset('img/ic-calculator.png') }}"><span>Credit Simulation</span>

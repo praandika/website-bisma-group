@@ -10,20 +10,20 @@
             <div class="modal-body">
                 <div class="row">
                     @forelse($data as $o)
-                    <div class="col-lg-4 col-md-4 container pilihUnit">
-                        <div class="pilihUnit" data-unit="{{ $o['model_name'] }}" data-price="{{ $o['price'] }}" data-rupiah="Rp{{ number_format($o['price'], 0, ',','.') }}">
-                            <div class="image">
-                                <img src="http://127.0.0.1:8000/img/motorcycle/{{ $o['image'] }}" class="img-fluid"
-                                    width="200px">
-                            </div>
-                            <div class="model_name">
-                                <p>
-                                    {{ $o['model_name'] }} <br>
-                                    <span class="harga">
-                                        Rp{{ number_format($o['price'], 0, ',','.') }}
-                                    </span>
-                                </p>
-                            </div>
+                    <div class="col-lg-4 col-md-4 container">
+                        <div class="image">
+                            <img src="http://127.0.0.1:8000/img/motorcycle/{{ $o['image'] }}"
+                                class="img-fluid pilihUnit" width="200px" data-unit="{{ $o['model_name'] }}"
+                                data-price="{{ $o['price'] }}"
+                                data-rupiah="Rp{{ number_format($o['price'], 0, ',','.') }}">
+                        </div>
+                        <div class="model_name">
+                            <p>
+                                {{ $o['model_name'] }} <br>
+                                <span class="harga">
+                                    Rp{{ number_format($o['price'], 0, ',','.') }}
+                                </span>
+                            </p>
                         </div>
 
                     </div>
@@ -51,7 +51,7 @@
 
 <script>
     $(document).on('click', '.pilihUnit', function (e) {
-        $('#price').val($(this).attr('data-price'));
+        $('#otr').val($(this).attr('data-price'));
         $('#angka_motor_menurun').val($(this).attr('data-rupiah'));
         $('#modelName').val($(this).attr('data-unit'));
         $('#modalUnit').modal('hide');
