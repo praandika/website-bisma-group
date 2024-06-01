@@ -192,6 +192,7 @@ a {
     bottom: 0;
     left: 0;
     margin: 0px 0px 7px 10px;
+    z-index: 99999;
 }
 
 /* Logo */
@@ -204,7 +205,7 @@ a {
 /* END Logo */
 
 /* Navigation */
-nav {
+nav.desktop {
     position: fixed;
     top: 0;
     left: 0;
@@ -216,40 +217,40 @@ nav {
     z-index: 999;
 }
 
-nav .menu {
+nav.desktop .menu {
     padding: 10px 20px 22px 20px;
     position: relative;
 }
 
-nav .menu img {
+nav.desktop .menu img {
     width: 28px;
     position: relative;
     top: 8px;
 }
 
-nav .menu span {
+nav.desktop .menu span {
     margin-left: 10px;
 }
 
-.active {
+nav.desktop .active {
     border-left: 5px solid var(--blue-1);
     background-color: var(--black-1);
     padding: 10px 20px 22px calc(20px - 5px) !important;
     color: var(--blue-2);
 }
 
-.active:hover {
+nav.desktop .active:hover {
     background-color: var(--black-1) !important;
 }
 
-nav .sidehover {
+nav.desktop .sidehover {
     position: absolute;
     width: 0px;
     transition: width .5s ease-out;
     z-index: -1;
 }
 
-nav .menu:hover .sidehover {
+nav.desktop .menu:hover .sidehover {
     width: 100%;
     top: 0;
     left: 0;
@@ -257,10 +258,66 @@ nav .menu:hover .sidehover {
     background-color: var(--blue-1);
 }
 
-nav .logo:hover {
+nav.desktop .logo:hover {
     cursor: pointer;
 }
 
+nav.mobile {
+    display: none;
+    color: #ffffff;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    font-size: 12px;
+    padding: 20px;
+    width: 100%;
+    /* From https://css.glass */
+    background: rgba(13, 85, 162, 0.68);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.4px);
+    -webkit-backdrop-filter: blur(11.4px);
+    z-index: 99999;
+}
+
+nav.mobile img {
+    width: 30px;
+}
+
+.logo-mobile {
+    display: none;
+    padding-top: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 99999;
+    text-align: center;
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.68);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.4px);
+    -webkit-backdrop-filter: blur(11.4px);
+}
+
+.logo-mobile img {
+    width: 300px;
+}
+
+.sosmed-header {
+    background-color: var(--blue-4);
+    padding: 5px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 8px;
+    display: none;
+}
+
+.sosmed-header a {
+    margin-right: 10px;
+}
+
+.sosmed-header a:last-child {
+    margin-right: 0px;
+}
 /* END Navigation */
 
 /* Header */

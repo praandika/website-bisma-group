@@ -5,7 +5,7 @@
             <span class="head-strip flip-in-ver-right"></span>
             <div class="row">
                 @foreach($data as $o)
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                     <a href="https://wa.me/{{ $o['phone2'] }}?text=Hai%20saya%20ingin%20info%20sepeda%20motor%20yamaha%20(https://127.0.0.1:8001)" target="_blank">
                         <div class="card-team slide-left">
                             <img src="http://127.0.0.1:8000/img/dealer/{{ $o['image'] }}" class="img-fluid">

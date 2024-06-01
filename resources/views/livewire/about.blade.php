@@ -30,6 +30,11 @@
         <div class="col-lg-6 jingle">
             <h1 class="slide-top">BISMA JINGLE</h1>
             <span class="head-strip flip-in-ver-right"></span>
+            <audio controls autoplay style="display: block; margin: auto;" id="audioPlayer">
+                <source src="{{ asset('audio/jingle_yamaha_bisma.mp3') }}" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <br>
             <div class="iframe-container-about"><iframe border="0" loading="lazy"
                     src="https://www.youtube.com/embed/uZSEghyk-l8?si=L3bXln1TCK_DNcSZ"></iframe></div>
                     <br>

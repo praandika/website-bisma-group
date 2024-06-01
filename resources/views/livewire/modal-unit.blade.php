@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal modal-xl fade" id="modalUnit" tabindex="-1" aria-labelledby="modalUnitLabel" aria-hidden="true">
+<div class="modal modal-xl fade" id="modalUnit" tabindex="-1" aria-labelledby="modalUnitLabel" aria-hidden="true" style="z-index: 9999999;">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">

@@ -1,11 +1,11 @@
 <div class="simulation-container">
     <div class="row form-group">
-        <div class="col-lg-6 col-md-12">
+        <div class="col-lg-6 col-md-6">
             <label for="setModel">Model :</label>
             <span id="setModel">{{ $title }}</span>
         </div>
 
-        <div class="col-lg-6 col-md-12">
+        <div class="col-lg-6 col-md-6">
             <label for="setPriceStr">OTR Price :</label>
             <span id="setPriceStr">Rp{{ number_format($price, 0, ',','.') }}</span>
             <span style="display: none;" id="angka_motor_menurun">{{ $price }}</span>
@@ -13,7 +13,7 @@
     </div>
 
     <div class="row form-group">
-        <div class="col-lg-6 col-md-12">
+        <div class="col-lg-6 col-md-6">
             <label for="bunga">Select Rate</label>
             <select id="bunga_menurun">
                 <option>- Pilih Bunga -</option>
@@ -22,7 +22,7 @@
             </select>
         </div>
 
-        <div class="col-lg-6 col-md-12">
+        <div class="col-lg-6 col-md-6">
             <label for="bunga">DP Percentage</label>
             <span id="dp_motor_menurun">0</span><span>%</span>
             <span style="display: none;" id="angka_dp_menurun"></span>

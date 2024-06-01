@@ -134,6 +134,10 @@
         font-size: 20px;
     }
 
+    .search-home {
+        top: 0px;
+    }
+
     .model-show img {
         padding: 0px 20px 20px 20px;
     }
@@ -378,9 +382,79 @@
     .jingle .lyrics p {
         font-size: 12px;
     }
+
+    footer p {
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width: 768px) {
+    * {
+        overflow-x: hidden !important;
+    }
+
+    .logo-mobile {
+        display: block !important;
+    }
+
+    .sosmed-header {
+        display: block;
+    }
+
+    nav.mobile {
+        display: block;
+    }
+
+    nav.desktop {
+        display: none;
+    }
+
+    .ornament {
+        display: none;
+    }
+
+    .content {
+        padding-left: 0;
+    }
+
+    .header {
+        text-align: center;
+        position: relative;
+    }
+
+    .header .link {
+        text-align: center;
+    }
+
+    .header .search {
+        text-align: center;
+    }
+
+    input[type=text].search {
+        width: 220px;
+    }
+
+    .item img {
+        -webkit-filter: grayscale(0%);
+        /* Safari 6.0 - 9.0 */
+        filter: grayscale(0%);
+    }
+
+    .search-home {
+        padding-left: var(--sidebar-width);
+        width: 100%;
+    }
+
+    .cta {
+        width: 100%;
+        margin-left: 60px;
+        padding-bottom: 20px;
+    }
+
+    footer {
+        padding: 20px 20px 80px 20px;
+    }
+
     .contentFeatured {
         position: absolute;
         top: 0;
@@ -388,38 +462,38 @@
     }
 
     #smartKey {
-        top: 180px;
-        left: 470px;
+        top: 170px !important;
+        left: 470px !important;
     }
     
     #luggage {
-        top: 190px;
+        top: 190px !important;
         left: 340px;
     }
     
     #smartFrontRefuel {
-        top: 210px;
-        left: 470px;
+        top: 200px !important;
+        left: 470px !important;
     }
     
     #blueCore {
-        top: 275px;
+        top: 280px !important;
         left: 355px;
     }
     
     #seat {
-        top: 165px;
-        left: 400px;
+        top: 160px !important;
+        left: 400px !important;
     }
     
     #led {
-        top: 100px;
+        top: 95px !important;
         left: 515px;
     }
     
     #footstep {
-        top: 250px;
-        left: 340px;
+        top: 250px !important;
+        left: 340px !important;
     }
     
     #tire {
@@ -428,8 +502,8 @@
     }
     
     #speedo {
-        top: 90px;
-        left: 480px;
+        top: 90px !important;
+        left: 470px !important;
     }
 
     #smartKeyContent {
@@ -494,6 +568,41 @@
         width: 100%;
     }
 
+    .model-call table {
+        font-size: 12px;
+    }
+
+    .team .phone-name,
+    .team .phone {
+        font-size: 15px !important;
+    }
+
+    .team .phone-name {
+        padding: 20px;
+    }
+
+    .team .phone {
+        top: -100px;
+    }
+
+    .maps {
+        position: relative;
+        width: 90%;
+        margin: auto;
+    }
+
+    .team .visimisi p {
+        font-size: 15px !important;
+    }
+
+    .jingle .lyrics {
+        text-align: center;
+    }
+
+    .jingle .lyrics p {
+        font-size: 15px;
+    }
+
     footer iframe {
         height: 200px;
     }
@@ -539,212 +648,79 @@
 }
 
 @media screen and (max-width: 425px) {
-    .header-desktop {
+    * {
+        overflow-x: hidden !important;
+    }
+
+    .sosmed-header {
         display: none;
     }
 
-    .header-mobile {
-        display: block;
-        background-color: #080707;
-        background-image: url("../../img/xv.png");
-        /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-        text-align: center;
-    }
-
-    .header-mobile img {
-        width: 300px;
-        padding: 5px 0;
-    }
-
-    .menu-mobile {
-        display: block;
-    }
-
-    .stage {
-        top: -80px;
-        width: 90%;
-        height: 100px;
-    }
-
-    .contact-widget {
+    .contentFeatured {
         display: none;
     }
 
-    .display-widget-mobile {
-        display: block;
+    .search-home {
+        position: static;
+        padding: 40px 20px 20px 20px;
     }
 
-    .marketplace-desktop {
-        display: none;
+    nav.mobile img {
+        width: 20px;
     }
 
-    .marketplace-mobile {
-        display: inline-block;
+    nav.mobile a {
+        font-size: 10px !important;
     }
 
-    .featured-desktop {
-        display: none;
+    .simulation-container .form-group .col-md-6 {
+        margin-bottom: 10px;
     }
 
-    .featured-mobile {
-        display: block;
+    .model-spfc .spec{
+        padding: 10px;
+        font-size: 12px;
     }
 
-    .sales img {
-        width: 150px;
+    .simulation-container.simulation-single-page .form-group .col-md-6 {
+        margin-bottom: 20px;
     }
 
-    .sales .nomor {
-        font-size: 15px;
-    }
-
-    .sales .name {
-        margin-top: 11px;
-        font-size: 18px;
-    }
-
-    header {
+    .maps {
         width: 100%;
     }
 
-    footer iframe {
-        height: 200px;
+    .team .visimisi {
+        padding: 0px 20px;
     }
 
-    footer .partner-wrap {
-        margin-top: 20px;
-        padding: 0 5px;
+    .team .visimisi p {
+        text-align: justify;
     }
 
-    .card {
-        display: inline-block;
-        margin: 10px 2px;
-        width: 200px;
-        border-radius: 20px 30px;
-        border: none;
-    }
-    
-    .card-title {
-        font-size: 12px;
-    }
-    
-    .card-title .harga {
-        display: inline-block;
-        position: absolute;
-        right: 15px;
-        top: -22px;
-        font-size: 14px;
-    }
-
-    .owl-prev,
-    .owl-next {
-        display: none;
-    }
-    
-    .sales .name {
-        margin-top: 11px;
-        font-size: 20px;
-    }
-
-    .sales a {
-        display: inline-block;
-        margin-bottom: 15px;
-    }
-
-    footer iframe {
-        border-radius: 20px;
-    }
-
-    footer .partner-mobile {
-        display: block;
-        text-align: center;
-    }
-
-    footer .partner-mobile img {
-        width: 180px;
-    }
-
-    footer .partner-desktop {
-        display: none;
-    }
-
-    .credit {
-        font-size: 12px;
-        padding-bottom: 70px;
+    .jingle .lyrics {
+        text-align: left;
     }
 }
 
 @media screen and (max-width: 384px) {
-    .card {
-        width: 180px;
-    }
-    
-    .card-title {
-        font-size: 12px;
-    }
-    
-    .card-title .harga {
-        top: -10px;
-        font-size: 12px;
-        height: 20px;
-        width: 150px;
-        outline: 2px dashed #f26b7f;
-        outline-offset: 3px;
-        padding-top: 2px;
-    }
-
-    .credit {
-        font-size: 10px;
-        padding-bottom: 70px;
-    }
+    /*  */
 }
 
 @media screen and (max-width: 320px) {
-    .card {
-        width: 150px;
+    .model-call {
+        padding: 0px;
     }
-    
-    .card-title {
+
+    nav.mobile img {
+        width: 15px;
+    }
+
+    nav.mobile a {
+        font-size: 8px !important;
+    }
+
+    .jingle table {
         font-size: 12px;
-    }
-    
-    .card-title .harga {
-        right: 10px;
-        font-size: 11px;
-        width: 130px;
-    }
-
-    .featured-mobile .title {
-        font-size: 12px;
-    }
-
-    .sales img {
-        width: 120px;
-    }
-
-    .sales-wrap .nomor {
-        font-size: 12px;
-        width: 180px;
-        height: 25px;
-        padding-top: 4px;
-        outline: 2px solid #19A7CE;
-        outline-offset: 3px;
-    }
-    
-    .sales .name {
-        margin-top: 10px;
-        font-size: 18px;
-        width: 80px;
-        height: 25px;
-        border-radius: 0 0 10px 10px;
-    }
-
-    footer .partner-mobile img {
-        width: 130px;
-    }
-
-    .credit {
-        font-size: 9px;
-        padding-bottom: 70px;
     }
 }

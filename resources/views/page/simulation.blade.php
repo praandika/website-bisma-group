@@ -17,12 +17,12 @@
         <form action="{{ route('count') }}" method="post">
             @csrf()
             <div class="row form-group">
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-6 col-md-6">
                     <label for="setModel">Model :</label>
                     <input type="text" placeholder="Choose Model" name="model" data-bs-toggle="modal" data-bs-target="#modalUnit" id="modelName" value="{{ old('model') }}" required>
                 </div>
 
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-6 col-md-6">
                     <label for="setPriceStr">OTR Price :</label>
                     <input type="text" placeholder="On The Road Price" id="angka_motor_menurun" value="{{ old('price') }}" name="price">
                     <input type="hidden" id="otr" name="otr" value="{{ old('otr') }}">
@@ -30,7 +30,7 @@
             </div>
 
             <div class="row form-group">
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-6 col-md-6">
                     <label for="bunga">Select Rate</label>
                     <select id="bunga_menurun" name="rate">
                         <option>- Pilih Bunga -</option>
@@ -39,7 +39,7 @@
                     </select>
                 </div>
 
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-6 col-md-6">
                     <label for="bunga">DP Percentage</label>
                     <span id="dp_motor_menurun">@if(session('dpPercent')) {{ session('dpPercent') }} @else 0 @endif</span><span>%</span>
                     <span style="display: none;" id="angka_dp_menurun"></span>
@@ -59,7 +59,7 @@
         </form>
 
         <div class="row simulation-result" style="margin-top: 20px; font-size: 25px;">
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6">
                 <div id="angsuran_menurun_12">
                     <div class="angsuran swing-in-left-bck">
                         <label for="">12 Bulan</label>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6">
                 <div id="angsuran_menurun_24">
                     <div class="angsuran swing-in-left-bck">
                         <label for="">24 Bulan</label>
@@ -79,7 +79,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6">
                 <div id="angsuran_menurun_36">
                     <div class="angsuran swing-in-left-bck">
                         <label for="">36 Bulan</label>
@@ -89,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6">
                 <div id="angsuran_menurun_48">
                     <div class="angsuran swing-in-left-bck">
                         <label for="">48 Bulan</label>
