@@ -1059,6 +1059,20 @@ button.apply:hover {
     background: linear-gradient(0deg, rgba(0,37,77,1) 0%, rgba(13,85,162,1) 100%);
     color: #ffffff;
 }
+
+.myyamaha {
+    background-color: #ffffff;
+    padding: 40px;
+}
+
+.myyamaha .col-6:first-child {
+    text-align: right;
+    padding-right: 60px;
+}
+
+.myyamaha col-6:last-child {
+    padding-left: 60px;
+}
 /* END Content */
 
 /* Footer */
