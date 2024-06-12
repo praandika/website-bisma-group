@@ -17,14 +17,14 @@
             <div class="col-lg-4 col-md-6 col-sm-12 item">
                 @if(Request::is('product/*'))
                 <a href="/product/{{ str_replace(' ', '_', $o['model_name']) }}/show" wire:navigate>
-                    <img src="http://127.0.0.1:8000/img/motorcycle/{{ $o['image'] }}" class="img-fluid">
+                    <img src="http://sibisma.yamahabismagroup.com/public/img/motorcycle/{{ $o['image'] }}" class="img-fluid">
                     <p class="model-name">{{ $o['model_name'] }}</p>
                     <p class="price"><span class="strip"></span>Rp{{ number_format($o['price'], 0, ',','.') }}<span
                             class="strip"></span></p>
                 </a>
                 @elseif(Request::is('spart/*'))
                 <a href="#">
-                    <img src="http://127.0.0.1:8000/img/sparepart/{{ $o['image'] }}" class="img-fluid">
+                    <img src="http://sibisma.yamahabismagroup.com/public/img/sparepart/{{ $o['image'] }}" class="img-fluid">
                     <p class="model-name">{{ $o['parts_name'] }}</p>
                     <p class="price"><span class="strip"></span>Rp{{ $o['price'] }}<span
                             class="strip"></span></p>

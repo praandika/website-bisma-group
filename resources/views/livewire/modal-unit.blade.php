@@ -12,7 +12,7 @@
                     @forelse($data as $o)
                     <div class="col-lg-4 col-md-4 container">
                         <div class="image">
-                            <img src="http://127.0.0.1:8000/img/motorcycle/{{ $o['image'] }}"
+                            <img src="http://sibisma.yamahabismagroup.com/public/img/motorcycle/{{ $o['image'] }}"
                                 class="img-fluid pilihUnit" width="200px" data-unit="{{ $o['model_name'] }}"
                                 data-price="{{ $o['price'] }}"
                                 data-rupiah="Rp{{ number_format($o['price'], 0, ',','.') }}">

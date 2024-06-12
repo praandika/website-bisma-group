@@ -13,13 +13,13 @@ class Product extends Component
     public function mount($cat) {
         if ($cat == 'all') {
             $client = new Client();
-            $url = "http://127.0.0.1:8000/api/zhismodel";
+            $url = "http://sibisma.yamahabismagroup.com/public/api/zhismodel";
             $response = $client->request('GET', $url);
             $content = json_decode($response->getBody()->getContents(), true);
             $this->product = $content['data'];
         } else {
             $client = new Client();
-            $url = "http://127.0.0.1:8000/api/zhismodel/".$cat;
+            $url = "http://sibisma.yamahabismagroup.com/public/api/zhismodel/".$cat;
             $response = $client->request('GET', $url);
             $content = json_decode($response->getBody()->getContents(), true);
             $this->product = $content['data'];

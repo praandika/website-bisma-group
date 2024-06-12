@@ -10,7 +10,7 @@ class LinkSpareparts extends Component
     public function render()
     {
         $catClient = new Client();
-        $url = "http://127.0.0.1:8000/api/zhispartcat/";
+        $url = "http://sibisma.yamahabismagroup.com/public/api/zhispartcat/";
         $response = $catClient->request('GET', $url);
         $content = json_decode($response->getBody()->getContents(), true);
         $category = $content['data'];

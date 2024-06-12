@@ -8,7 +8,7 @@ class ShowProductController extends Controller
 {
     public function show($model) {
         $client = new Client();
-        $url = "http://127.0.0.1:8000/api/zhismodeldetail/$model";
+        $url = "http://sibisma.yamahabismagroup.com/public/api/zhismodeldetail/$model";
         $response = $client->request('GET', $url);
         $content = json_decode($response->getBody()->getContents(), true);
         $data = $content['data'];
@@ -18,13 +18,13 @@ class ShowProductController extends Controller
         $model = $data[0]['model_name'];
 
         $colorClient = new Client();
-        $colorUrl = "http://127.0.0.1:8000/api/zhiscolor/$model";
+        $colorUrl = "http://sibisma.yamahabismagroup.com/public/api/zhiscolor/$model";
         $colorResponse = $colorClient->request('GET', $colorUrl);
         $colorContent = json_decode($colorResponse->getBody()->getContents(), true);
         $color = $colorContent['data'];
 
         $imageClient = new Client();
-        $imageUrl = "http://127.0.0.1:8000/api/zhisimage/$model";
+        $imageUrl = "http://sibisma.yamahabismagroup.com/public/api/zhisimage/$model";
         $imageResponse = $imageClient->request('GET', $imageUrl);
         $imageContent = json_decode($imageResponse->getBody()->getContents(), true);
         $image = $imageContent['data'];
@@ -33,37 +33,37 @@ class ShowProductController extends Controller
         }
 
         $dealerClient = new Client();
-        $dealerUrl = "http://127.0.0.1:8000/api/zhisavailable/$model";
+        $dealerUrl = "http://sibisma.yamahabismagroup.com/public/api/zhisavailable/$model";
         $dealerResponse = $dealerClient->request('GET', $dealerUrl);
         $dealerContent = json_decode($dealerResponse->getBody()->getContents(), true);
         $dealer = $dealerContent['data'];
 
         $acolorClient = new Client();
-        $acolorUrl = "http://127.0.0.1:8000/api/zhisavailablecolor/$model";
+        $acolorUrl = "http://sibisma.yamahabismagroup.com/public/api/zhisavailablecolor/$model";
         $acolorResponse = $acolorClient->request('GET', $acolorUrl);
         $acolorContent = json_decode($acolorResponse->getBody()->getContents(), true);
         $acolor = $acolorContent['data'];
 
         $mesinClient = new Client();
-        $mesinUrl = "http://127.0.0.1:8000/api/zhisspecmesin/$model";
+        $mesinUrl = "http://sibisma.yamahabismagroup.com/public/api/zhisspecmesin/$model";
         $mesinResponse = $mesinClient->request('GET', $mesinUrl);
         $mesinContent = json_decode($mesinResponse->getBody()->getContents(), true);
         $mesin = ($mesinContent['data'] != null) ? json_decode($mesinContent['data'][0]['mesin'], true) : 'No data available' ;
 
         $rangkaClient = new Client();
-        $rangkaUrl = "http://127.0.0.1:8000/api/zhisspecrangka/$model";
+        $rangkaUrl = "http://sibisma.yamahabismagroup.com/public/api/zhisspecrangka/$model";
         $rangkaResponse = $rangkaClient->request('GET', $rangkaUrl);
         $rangkaContent = json_decode($rangkaResponse->getBody()->getContents(), true);
         $rangka = ($rangkaContent['data'] != null) ? json_decode($rangkaContent['data'][0]['rangka'], true) : 'No data available' ;
 
         $dimensiClient = new Client();
-        $dimensiUrl = "http://127.0.0.1:8000/api/zhisspecdimensi/$model";
+        $dimensiUrl = "http://sibisma.yamahabismagroup.com/public/api/zhisspecdimensi/$model";
         $dimensiResponse = $dimensiClient->request('GET', $dimensiUrl);
         $dimensiContent = json_decode($dimensiResponse->getBody()->getContents(), true);
         $dimensi = ($dimensiContent['data'] != null) ? json_decode($dimensiContent['data'][0]['dimensi'], true) : 'No data available' ;
 
         $kelistrikanClient = new Client();
-        $kelistrikanUrl = "http://127.0.0.1:8000/api/zhisspeckelistrikan/$model";
+        $kelistrikanUrl = "http://sibisma.yamahabismagroup.com/public/api/zhisspeckelistrikan/$model";
         $kelistrikanResponse = $kelistrikanClient->request('GET', $kelistrikanUrl);
         $kelistrikanContent = json_decode($kelistrikanResponse->getBody()->getContents(), true);
         $kelistrikan = ($kelistrikanContent['data'] != null) ? json_decode($kelistrikanContent['data'][0]['kelistrikan'], true) : 'No data available' ;

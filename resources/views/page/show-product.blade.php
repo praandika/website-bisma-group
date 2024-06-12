@@ -22,7 +22,7 @@
                     <div class="col-lg-4 col-md-12 model-show">
                         @foreach($image as $o)
                         <div class="image-container d-flex justify-content-center">
-                            <img src="http://127.0.0.1:8000/img/motorcycle/{{ $o['image'] }}"
+                            <img src="http://sibisma.yamahabismagroup.com/public/img/motorcycle/{{ $o['image'] }}"
                                 class="img-fluid slide-in-left img {{ $o['index'] == 0 ? 'show-img' : '' }}"
                                 id="{{ $o['color_name'] }}">
                         </div>

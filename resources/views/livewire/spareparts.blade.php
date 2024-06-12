@@ -17,7 +17,7 @@
             @forelse($data as $o)
             <div class="col-lg-4 col-md-6 col-sm-12 item">
                 <a href="#">
-                    <img src="http://127.0.0.1:8000/img/sparepart/{{ $o['image'] }}" class="img-fluid">
+                    <img src="http://sibisma.yamahabismagroup.com/public/img/sparepart/{{ $o['image'] }}" class="img-fluid">
                     <p class="model-name">{{ $o['parts_name'] }}</p>
                     <p class="price"><span class="strip"></span>Rp{{ $o['price'] }}<span class="strip"></span></p>
 

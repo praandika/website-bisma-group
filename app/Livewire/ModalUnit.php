@@ -10,7 +10,7 @@ class ModalUnit extends Component
     public function render()
     {
         $client = new Client();
-        $url = "http://127.0.0.1:8000/api/zhismodel";
+        $url = "http://sibisma.yamahabismagroup.com/public/api/zhismodel";
         $response = $client->request('GET', $url);
         $content = json_decode($response->getBody()->getContents(), true);
         $data = $content['data'];

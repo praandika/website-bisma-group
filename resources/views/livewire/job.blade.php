@@ -16,8 +16,8 @@
                         class="{{ Request::is('job/mekanik') ? 'active-link' : '' }}">MEKANIK</a></span>
                 <span><a href="/job/admin" wire:navigate
                         class="{{ Request::is('job/admin') ? 'active-link' : '' }}">ADMIN</a></span>
-                <span><a href="/job/supir" wire:navigate
-                        class="{{ Request::is('job/supir') ? 'active-link' : '' }}">SUPIR</a></span>
+                <span><a href="/job/sopir" wire:navigate
+                        class="{{ Request::is('job/sopir') ? 'active-link' : '' }}">SOPIR</a></span>
                 <span><a href="/job/other" wire:navigate
                         class="{{ Request::is('job/other') ? 'active-link' : '' }}">OTHER</a></span>
             </div>
@@ -56,9 +56,9 @@
                         </div>
                     </div>
 
-                    <button class="apply slide-bottom">
+                    <a href="mailto:karir.yamahabisma@gmail.com" class="apply slide-bottom">
                         Apply Now
-                    </button>
+                    </a>
                 </a>
             </div>
             @empty

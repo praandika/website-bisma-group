@@ -10,7 +10,7 @@ class Content extends Component
     public function render()
     {
         $client = new Client();
-        $url = "http://127.0.0.1:8000/api/zhisbanner";
+        $url = "http://sibisma.yamahabismagroup.com/public/api/zhisbanner";
         $response = $client->request('GET', $url);
         $content = json_decode($response->getBody()->getContents(), true);
         $data = $content['data'];
