@@ -293,6 +293,8 @@ nav.mobile img {
     padding: 20px 20px 20px 10px;
     width: 50%;
     z-index: 99999;
+    background: var(--black-1);
+    background: linear-gradient(90deg, var(--black-1) 0%, var(--black-2) 50%, transparent 100%);
 }
 
 .logo-mobile {
