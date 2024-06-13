@@ -407,6 +407,8 @@
 
     .add-menu {
         display: block;
+        bottom: 65px;
+        width: 30%;
     }
 
     nav.desktop {
@@ -732,6 +734,10 @@
 
     nav.mobile a {
         font-size: 8px !important;
+    }
+
+    .add-menu {
+        bottom: 50px;
     }
 
     .item {
