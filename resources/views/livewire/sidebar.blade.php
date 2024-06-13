@@ -15,7 +15,7 @@
             <img src="{{ asset('img/ic-scooter-dark.png') }}"><span>Product</span>
         </div>
     </a>
-    <a href="/spart/all" wire:navigate>
+    <a href="{{ url('spart/all') }}" wire:navigate>
         <div class="menu {{ Request::is('spart/*') ? 'active' : '' }}">
             <div class="sidehover"></div>    
             <img src="{{ asset('img/ic-parts-dark.png') }}"><span>Spare Parts</span>
@@ -27,13 +27,13 @@
             <img src="{{ asset('img/ic-calculator-dark.png') }}"><span>Credit Simulation</span>
         </div>
     </a>
-    <a href="/contact" wire:navigate>
+    <a href="{{ url('contact') }}" wire:navigate>
         <div class="menu {{ Request::is('contact') ? 'active' : '' }}">
             <div class="sidehover"></div>    
             <img src="{{ asset('img/ic-call-dark.png') }}"><span>Contact</span>
         </div>
     </a>
-    <a href="/job/all" wire:navigate>
+    <a href="{{ url('job/all') }}" wire:navigate>
         <div class="menu {{ Request::is('job/*') ? 'active' : '' }}">
             <div class="sidehover"></div>    
             <img src="{{ asset('img/ic-vacancy-dark.png') }}"><span>Job Vacancy</span>
@@ -45,7 +45,7 @@
             <img src="{{ asset('img/ic-socmed-dark.png') }}"><span>Social Media</span>
         </div>
     </a>
-    <a href="/about" wire:navigate>
+    <a href="{{ url('about') }}" wire:navigate>
         <div class="menu {{ Request::is('about') ? 'active' : '' }}">
             <div class="sidehover"></div>    
             <img src="{{ asset('img/ic-about-dark.png') }}"><span>About Us</span>

@@ -3,25 +3,25 @@
         <a href="{{ route('home') }}" class="{{ Request::is('/') ? 'active-footer' : '' }}">Home</a>
     </span>
     <span class="link">
-        <a href="website/public/product/all" class="{{ Request::is('product/*') ? 'active-footer' : '' }}">Product</a>
+        <a href="{{ url('product/all') }}" class="{{ Request::is('product/*') ? 'active-footer' : '' }}">Product</a>
     </span>
     <span class="link">
-        <a href="website/public/spart/all" class="{{ Request::is('spart/*') ? 'active-footer' : '' }}">Spare Parts</a>
+        <a href="{{ url('spart/all') }}" class="{{ Request::is('spart/*') ? 'active-footer' : '' }}">Spare Parts</a>
     </span>
     <span class="link">
-        <a href="website/public/simulation" class="{{ Request::is('simulation') ? 'active-footer' : '' }}">Credit Simulation</a>
+        <a href="route('simulation')" class="{{ Request::is('simulation') ? 'active-footer' : '' }}">Credit Simulation</a>
     </span>
     <span class="link">
-        <a href="website/public/contact" class="{{ Request::is('contact') ? 'active-footer' : '' }}">Contact</a>
+        <a href="{{ url('contact') }}" class="{{ Request::is('contact') ? 'active-footer' : '' }}">Contact</a>
     </span>
     <span class="link">
-        <a href="website/public/job/all" class="{{ Request::is('job/*') ? 'active-footer' : '' }}">Job Vacancy</a>
+        <a href="{{ url('job/all') }}" class="{{ Request::is('job/*') ? 'active-footer' : '' }}">Job Vacancy</a>
     </span>
     <span class="link">
         <a href="https://yamahabismagroup.com/sosmed" class="{{ Request::is('socmed') ? 'active-footer' : '' }}">Social Media</a>
     </span>
     <span class="link">
-        <a href="website/public/about" class="{{ Request::is('about') ? 'active-footer' : '' }}">About Us</a>
+        <a href="{{ url('about') }}" class="{{ Request::is('about') ? 'active-footer' : '' }}">About Us</a>
     </span>
     <div class="credit">
         <p>
