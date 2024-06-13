@@ -1,6 +1,6 @@
 <div>
     <div class="row add-menu">
-        <img src="{{ asset('img/footer-logo.png') }}" width="100px">
+        <img src="{{ asset('img/footer-logo.png') }}" width="50px">
     </div>
     <nav class="mobile">
         <div class="row">
