@@ -434,6 +434,10 @@
         width: 220px;
     }
 
+    .item {
+        opacity: 0.8;
+    }
+
     .item img {
         -webkit-filter: grayscale(0%);
         /* Safari 6.0 - 9.0 */
@@ -673,6 +677,10 @@
         font-size: 10px !important;
     }
 
+    .item {
+        opacity: 0.8;
+    }
+
     .simulation-container .form-group .col-md-6 {
         margin-bottom: 10px;
     }
@@ -718,6 +726,10 @@
 
     nav.mobile a {
         font-size: 8px !important;
+    }
+
+    .item {
+        opacity: 0.8;
     }
 
     .jingle table {
