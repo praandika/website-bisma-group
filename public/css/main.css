@@ -959,7 +959,8 @@ button.warna {
     background: linear-gradient(90deg, var(--red-1) 0%, var(--red-2) 50%, transparent 100%);
 }
 
-button.apply {
+a.apply {
+    display: block;
     outline: 1px solid var(--green-3);
     outline-offset: 5px;
     border: none;
@@ -972,7 +973,7 @@ button.apply {
     margin-bottom: 20px;
 }
 
-button.apply:hover {
+a.apply:hover {
     background-color: var(--green-3);
     outline: 1px solid var(--green-1);
 }

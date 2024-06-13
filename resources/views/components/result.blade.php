@@ -58,9 +58,9 @@
                         </div>
                     </div>
 
-                    <button class="apply slide-bottom">
+                    <a href="mailto:karir.yamahabisma@gmail.com" class="apply slide-bottom">
                         Apply Now
-                    </button>
+                    </a href="">
                 </a>
                 @endif
             </div>

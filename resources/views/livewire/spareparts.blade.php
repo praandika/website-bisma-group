@@ -16,7 +16,7 @@
         <div class="row">
             @forelse($data as $o)
             <div class="col-lg-4 col-md-6 col-sm-12 item">
-                <a href="#">
+                <a href="https://wa.me/6281237547462?text=Hi%20apakah%20{{ $o['parts_name'] }}%20tersedia?" target="_blank">
                     <img src="http://sibisma.yamahabismagroup.com/public/img/sparepart/{{ $o['image'] }}" class="img-fluid">
                     <p class="model-name">{{ $o['parts_name'] }}</p>
                     <p class="price"><span class="strip"></span>Rp{{ $o['price'] }}<span class="strip"></span></p>
@@ -24,7 +24,6 @@
                     <button class="order">
                         <img src="{{ asset('img/ic-order.png') }}">Order Parts
                     </button>
-
                 </a>
             </div>
             @empty

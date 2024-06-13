@@ -19,7 +19,7 @@ class HomeController extends Controller
         ];
 
         $client = new Client();
-        $url = "http://sibisma.yamahabismagroup.com/public/api/zhissearch";
+        $url = "https://sibisma.yamahabismagroup.com/public/api/zhissearch";
         $response = $client->request('POST', $url, [
             'headers' => ['Content-type'=>'application/json'],
             'body' => json_encode($parameter)
@@ -37,7 +37,7 @@ class HomeController extends Controller
         ];
 
         $client = new Client();
-        $url = "http://sibisma.yamahabismagroup.com/public/api/zhissearchspart";
+        $url = "https://sibisma.yamahabismagroup.com/public/api/zhissearchspart";
         $response = $client->request('POST', $url, [
             'headers' => ['Content-type'=>'application/json'],
             'body' => json_encode($parameter)
@@ -55,7 +55,7 @@ class HomeController extends Controller
         ];
 
         $client = new Client();
-        $url = "http://sibisma.yamahabismagroup.com/public/api/zhissearchjob";
+        $url = "https://sibisma.yamahabismagroup.com/public/api/zhissearchjob";
         $response = $client->request('POST', $url, [
             'headers' => ['Content-type'=>'application/json'],
             'body' => json_encode($parameter)
