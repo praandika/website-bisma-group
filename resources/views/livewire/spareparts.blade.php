@@ -5,7 +5,7 @@
             <div class="col-lg-4 col-md-12 menu-title">
                 {{ strToUpper($title) }}
             </div>
-            <livewire:linkspareparts />
+            <livewire:link-spareparts />
             <div class="col-lg-2 col-md-12 search">
                 <x-search />
             </div>
