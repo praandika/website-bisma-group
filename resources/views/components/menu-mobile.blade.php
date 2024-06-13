@@ -5,11 +5,11 @@
                 <img src="{{ asset('img/ic-home.png') }}">
                 <div>Home</div>
             </a>
-            <a href="/product/all" wire:navigate>
+            <a href="{{ url('product/all') }}" wire:navigate>
                 <img src="{{ asset('img/ic-scooter.png') }}">
                 <div>Product</div>
             </a>
-            <a href="/spart/all" wire:navigate>
+            <a href="{{ url('spart/all') }}" wire:navigate>
                 <img src="{{ asset('img/ic-parts.png') }}">
                 <div>Parts</div>
             </a>
@@ -17,11 +17,11 @@
                 <img src="{{ asset('img/ic-calculator.png') }}">
                 <div>Credit</div>
             </a>
-            <a href="/contact" wire:navigate>
+            <a href="{{ url('contact') }}" wire:navigate>
                 <img src="{{ asset('img/ic-call.png') }}">
                 <div>Contact</div>
             </a>
-            <a href="/job/all" wire:navigate>
+            <a href="{{ url('job/all') }}" wire:navigate>
                 <img src="{{ asset('img/ic-vacancy.png') }}">
                 <div>Career</div>
             </a>
@@ -29,7 +29,7 @@
                 <img src="{{ asset('img/ic-socmed.png') }}">
                 <div>Social</div>
             </a>
-            <a href="/about" wire:navigate>
+            <a href="{{ url('about') }}" wire:navigate>
                 <img src="{{ asset('img/ic-about.png') }}">
                 <div>About</div>
             </a>

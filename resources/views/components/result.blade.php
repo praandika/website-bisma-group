@@ -16,7 +16,7 @@
             @forelse($data as $o)
             <div class="col-lg-4 col-md-6 col-sm-12 item">
                 @if(Request::is('product/*'))
-                <a href="/product/{{ str_replace(' ', '_', $o['model_name']) }}/show" wire:navigate>
+                <a href="{{ url('product/'.str_replace(' ', '_', $o['model_name']).'') }}/show" wire:navigate>
                     <img src="http://sibisma.yamahabismagroup.com/public/img/motorcycle/{{ $o['image'] }}" class="img-fluid">
                     <p class="model-name">{{ $o['model_name'] }}</p>
                     <p class="price"><span class="strip"></span>Rp{{ number_format($o['price'], 0, ',','.') }}<span
@@ -60,7 +60,7 @@
 
                     <a href="mailto:karir.yamahabisma@gmail.com" class="apply slide-bottom">
                         Apply Now
-                    </a href="">
+                    </a>
                 </a>
                 @endif
             </div>
