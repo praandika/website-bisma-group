@@ -435,7 +435,7 @@
     }
 
     .item {
-        opacity: 0.8;
+        opacity: 0.8 !important;
     }
 
     .item img {
@@ -678,7 +678,7 @@
     }
 
     .item {
-        opacity: 0.8;
+        opacity: 0.8 !important;
     }
 
     .simulation-container .form-group .col-md-6 {
@@ -712,7 +712,9 @@
 }
 
 @media screen and (max-width: 384px) {
-    /*  */
+    .item {
+        opacity: 0.8 !important;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -729,7 +731,7 @@
     }
 
     .item {
-        opacity: 0.8;
+        opacity: 0.8 !important;
     }
 
     .jingle table {
