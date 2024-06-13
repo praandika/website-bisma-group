@@ -283,15 +283,15 @@ nav.mobile img {
     width: 30px;
 }
 
-nav.mobile .logo-menu {
+.logo-menu {
     background-color: var(--blue-4);
 }
 
-nav.mobile .contact-menu {
+.contact-menu {
     background-color: var(--green-2);
 }
 
-nav.mobile .simulation-menu {
+.simulation-menu {
     background-color: var(--red-2);
 }
 

@@ -1,49 +1,49 @@
-<nav class="mobile">
+<div>
     <div class="row">
-        <div class="col-12 d-flex justify-content-between">
-            <div class="col-4 logo-menu">
-                <img src="{{ asset('img/footer-logo.png') }}">
-            </div>
-            <div class="col-4 contact-menu">
-                <a href="{{ url('contact') }}" wire:navigate>
-                    <img src="{{ asset('img/ic-call.png') }}">
-                    <div>Contact</div>
-                </a>
-            </div>
-            <div class="col-4 simulation-menu">
-                <a href="{{ route('simulation') }}">
-                    <img src="{{ asset('img/ic-calculator.png') }}">
-                    <div>Credit Simulation</div>
-                </a>
-            </div>
+        <div class="col-4 logo-menu">
+            <img src="{{ asset('img/footer-logo.png') }}">
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 d-flex justify-content-between">
-            <a href="{{ route('home') }}">
-                <img src="{{ asset('img/ic-home.png') }}">
-                <div>Home</div>
+        <div class="col-4 contact-menu">
+            <a href="{{ url('contact') }}" wire:navigate>
+                <img src="{{ asset('img/ic-call.png') }}">
+                <div>Contact</div>
             </a>
-            <a href="{{ url('product/all') }}" wire:navigate>
-                <img src="{{ asset('img/ic-scooter.png') }}">
-                <div>Product</div>
-            </a>
-            <a href="{{ url('spart/all') }}" wire:navigate>
-                <img src="{{ asset('img/ic-parts.png') }}">
-                <div>Parts</div>
-            </a>
-            <a href="{{ url('job/all') }}" wire:navigate>
-                <img src="{{ asset('img/ic-vacancy.png') }}">
-                <div>Career</div>
-            </a>
-            <a href="https://yamahabismagroup.com/sosmed" target="_blank">
-                <img src="{{ asset('img/ic-socmed.png') }}">
-                <div>Social</div>
-            </a>
-            <a href="{{ url('about') }}" wire:navigate>
-                <img src="{{ asset('img/ic-about.png') }}">
-                <div>About</div>
+        </div>
+        <div class="col-4 simulation-menu">
+            <a href="{{ route('simulation') }}">
+                <img src="{{ asset('img/ic-calculator.png') }}">
+                <div>Credit Simulation</div>
             </a>
         </div>
     </div>
-</nav>
+    <nav class="mobile">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between">
+                <a href="{{ route('home') }}">
+                    <img src="{{ asset('img/ic-home.png') }}">
+                    <div>Home</div>
+                </a>
+                <a href="{{ url('product/all') }}" wire:navigate>
+                    <img src="{{ asset('img/ic-scooter.png') }}">
+                    <div>Product</div>
+                </a>
+                <a href="{{ url('spart/all') }}" wire:navigate>
+                    <img src="{{ asset('img/ic-parts.png') }}">
+                    <div>Parts</div>
+                </a>
+                <a href="{{ url('job/all') }}" wire:navigate>
+                    <img src="{{ asset('img/ic-vacancy.png') }}">
+                    <div>Career</div>
+                </a>
+                <a href="https://yamahabismagroup.com/sosmed" target="_blank">
+                    <img src="{{ asset('img/ic-socmed.png') }}">
+                    <div>Social</div>
+                </a>
+                <a href="{{ url('about') }}" wire:navigate>
+                    <img src="{{ asset('img/ic-about.png') }}">
+                    <div>About</div>
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
