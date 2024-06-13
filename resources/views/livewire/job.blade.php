@@ -6,19 +6,19 @@
                 JOB VANCANCY
             </div>
             <div class="col-lg-6 col-md-12 link">
-                <span><a href="/job/all" wire:navigate
+                <span><a href="website/public/job/all" wire:navigate
                         class="{{ Request::is('job/all') ? 'active-link' : '' }}">All</a></span>
-                <span><a href="/job/sales" wire:navigate
+                <span><a href="website/public/job/sales" wire:navigate
                         class="{{ Request::is('job/sales') ? 'active-link' : '' }}">SALES</a></span>
-                <span><a href="/job/counter" wire:navigate
+                <span><a href="website/public/job/counter" wire:navigate
                         class="{{ Request::is('job/counter') ? 'active-link' : '' }}">COUNTER</a></span>
-                <span><a href="/job/mekanik" wire:navigate
+                <span><a href="website/public/job/mekanik" wire:navigate
                         class="{{ Request::is('job/mekanik') ? 'active-link' : '' }}">MEKANIK</a></span>
-                <span><a href="/job/admin" wire:navigate
+                <span><a href="website/public/job/admin" wire:navigate
                         class="{{ Request::is('job/admin') ? 'active-link' : '' }}">ADMIN</a></span>
-                <span><a href="/job/sopir" wire:navigate
+                <span><a href="website/public/job/sopir" wire:navigate
                         class="{{ Request::is('job/sopir') ? 'active-link' : '' }}">SOPIR</a></span>
-                <span><a href="/job/other" wire:navigate
+                <span><a href="website/public/job/other" wire:navigate
                         class="{{ Request::is('job/other') ? 'active-link' : '' }}">OTHER</a></span>
             </div>
             <div class="col-lg-2 col-md-12 search">
