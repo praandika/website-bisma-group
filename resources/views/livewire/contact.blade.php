@@ -6,7 +6,7 @@
             <div class="row">
                 @foreach($data as $o)
                 <div class="col-lg-6 col-md-6">
-                    <a href="https://wa.me/{{ $o['phone2'] }}?text=Hai%20saya%20ingin%20info%20sepeda%20motor%20yamaha%20(https://127.0.0.1:8001)" target="_blank">
+                    <a href="https://wa.me/{{ $o['phone2'] }}?text=Hai%20saya%20ingin%20info%20sepeda%20motor%20yamaha%20(https://yamahabismagroup.com)" target="_blank">
                         <div class="card-team slide-left">
                             <img src="http://sibisma.yamahabismagroup.com/public/img/dealer/{{ $o['image'] }}" class="img-fluid">
                             <div class="phone-name bg-change-color-2">
