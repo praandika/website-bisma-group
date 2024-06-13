@@ -1,7 +1,7 @@
 <div>
-    <div class="row">
+    <div class="row add-menu">
         <div class="col-4 logo-menu">
-            <img src="{{ asset('img/footer-logo.png') }}">
+            <img src="{{ asset('img/footer-logo.png') }}" width="100px">
         </div>
         <div class="col-4 contact-menu">
             <a href="{{ url('contact') }}" wire:navigate>

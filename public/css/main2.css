@@ -283,16 +283,39 @@ nav.mobile img {
     width: 30px;
 }
 
-.logo-menu {
-    background-color: var(--blue-4);
+.add-menu {
+    display: none;
+    color: #ffffff;
+    position: fixed;
+    bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+    padding: 20px;
+    z-index: 99999;
 }
 
-.contact-menu {
-    background-color: var(--green-2);
+.add-menu .logo-menu {
+    /* From https://css.glass */
+    background: rgba(5, 41, 79, 0.68);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.4px);
+    -webkit-backdrop-filter: blur(11.4px);
 }
 
-.simulation-menu {
-    background-color: var(--red-2);
+.add-menu .contact-menu {
+    /* From https://css.glass */
+    background: rgba(6, 244, 157, 0.68);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.4px);
+    -webkit-backdrop-filter: blur(11.4px);
+}
+
+.add-menu .simulation-menu {
+    /* From https://css.glass */
+    background: rgba(244, 228, 6, 0.68);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.4px);
+    -webkit-backdrop-filter: blur(11.4px);
 }
 
 .logo-mobile {

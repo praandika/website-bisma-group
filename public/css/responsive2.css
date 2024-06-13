@@ -405,6 +405,10 @@
         display: block;
     }
 
+    .add-menu {
+        display: block;
+    }
+
     nav.desktop {
         display: none;
     }
