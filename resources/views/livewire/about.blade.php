@@ -84,4 +84,13 @@
     </div>
 
     <x-back-to-top />
+
+    @push('after-js')
+    <script>
+        window.onload = function() {
+            let audio = document.getElementById("audioPlayer");
+            audio.play();
+        }
+    </script>
+    @endpush
 </div>

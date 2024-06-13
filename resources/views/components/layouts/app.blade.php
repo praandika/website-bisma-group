@@ -19,7 +19,7 @@
         @stack('after-css')
         <script src="https://kit.fontawesome.com/f7d1a663d2.js" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body id="body">
         <x-logo-mobile/>
         <livewire:sidebar/>
         {{ $slot }}
