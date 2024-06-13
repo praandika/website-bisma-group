@@ -290,11 +290,11 @@ nav.mobile img {
     bottom: 60px;
     text-align: center;
     font-size: 12px;
-    padding: 20px 20px 20px 10px;
+    padding: 10px 20px 20px 10px;
     width: 50%;
     z-index: 99999;
     background: var(--black-1);
-    background: linear-gradient(90deg, var(--black-1) 0%, var(--black-2) 50%, transparent 100%);
+    background: linear-gradient(90deg, var(--black-1) 0%, var(--black-1) 50%, var(--black-2) 80%, transparent 100%);
 }
 
 .logo-mobile {
