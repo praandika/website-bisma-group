@@ -287,16 +287,12 @@ nav.mobile img {
     display: none;
     color: #ffffff;
     position: fixed;
-    bottom: 25px;
+    bottom: 30px;
     text-align: center;
     font-size: 12px;
     padding: 20px;
     width: 100%;
     z-index: 99999;
-}
-
-.add-menu img {
-    width: 50px;
 }
 
 .logo-mobile {
