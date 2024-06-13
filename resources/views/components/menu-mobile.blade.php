@@ -1,5 +1,5 @@
 <div>
-    <div class="row add-menu">
+    <div class="row add-menu d-flex justify-content-between">
         <div class="col-4 logo-menu">
             <img src="{{ asset('img/footer-logo.png') }}" width="100px">
         </div>
