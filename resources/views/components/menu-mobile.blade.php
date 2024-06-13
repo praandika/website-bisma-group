@@ -1,20 +1,6 @@
 <div>
-    <div class="row add-menu d-flex justify-content-between">
-        <div class="col-4 logo-menu">
-            <img src="{{ asset('img/footer-logo.png') }}" width="100px">
-        </div>
-        <div class="col-4 contact-menu">
-            <a href="{{ url('contact') }}" wire:navigate>
-                <img src="{{ asset('img/ic-call.png') }}">
-                <div>Contact</div>
-            </a>
-        </div>
-        <div class="col-4 simulation-menu">
-            <a href="{{ route('simulation') }}">
-                <img src="{{ asset('img/ic-calculator.png') }}">
-                <div>Credit Simulation</div>
-            </a>
-        </div>
+    <div class="row add-menu">
+        <img src="{{ asset('img/footer-logo.png') }}" width="100px">
     </div>
     <nav class="mobile">
         <div class="row">
@@ -34,6 +20,14 @@
                 <a href="{{ url('job/all') }}" wire:navigate>
                     <img src="{{ asset('img/ic-vacancy.png') }}">
                     <div>Career</div>
+                </a>
+                <a href="{{ url('contact') }}" wire:navigate>
+                    <img src="{{ asset('img/ic-call.png') }}">
+                    <div>Contact</div>
+                </a>
+                <a href="{{ route('simulation') }}">
+                    <img src="{{ asset('img/ic-calculator.png') }}">
+                    <div>Credit</div>
                 </a>
                 <a href="https://yamahabismagroup.com/sosmed" target="_blank">
                     <img src="{{ asset('img/ic-socmed.png') }}">
