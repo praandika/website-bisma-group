@@ -291,6 +291,7 @@ nav.mobile img {
     text-align: center;
     font-size: 12px;
     padding: 20px;
+    width: 100%;
     z-index: 99999;
 }
 
