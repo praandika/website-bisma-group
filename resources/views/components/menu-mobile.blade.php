@@ -1,6 +1,6 @@
 <div>
     <div class="row add-menu">
-        <img src="{{ asset('img/footer-logo.png') }}" width="100px">
+        <img src="{{ asset('img/footer-logo.png') }}" width="50px">
     </div>
     <nav class="mobile">
         <div class="row">
@@ -17,6 +17,10 @@
                     <img src="{{ asset('img/ic-parts.png') }}">
                     <div>Parts</div>
                 </a>
+                <a href="{{ route('simulation') }}">
+                    <img src="{{ asset('img/ic-calculator.png') }}">
+                    <div>Credit</div>
+                </a>
                 <a href="{{ url('job/all') }}" wire:navigate>
                     <img src="{{ asset('img/ic-vacancy.png') }}">
                     <div>Career</div>
@@ -24,10 +28,6 @@
                 <a href="{{ url('contact') }}" wire:navigate>
                     <img src="{{ asset('img/ic-call.png') }}">
                     <div>Contact</div>
-                </a>
-                <a href="{{ route('simulation') }}">
-                    <img src="{{ asset('img/ic-calculator.png') }}">
-                    <div>Credit</div>
                 </a>
                 <a href="https://yamahabismagroup.com/sosmed" target="_blank">
                     <img src="{{ asset('img/ic-socmed.png') }}">
