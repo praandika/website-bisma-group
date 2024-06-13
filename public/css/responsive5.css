@@ -683,6 +683,10 @@
         font-size: 10px !important;
     }
 
+    .add-menu {
+        width: 50%;
+    }
+
     .item {
         opacity: 0.8 !important;
     }
