@@ -24,8 +24,8 @@
 
                 <div class="col-lg-6 col-md-6">
                     <label for="setPriceStr">OTR Price :</label>
-                    <input type="text" placeholder="On The Road Price" id="angka_motor_menurun" value="{{ old('price') }}" name="price">
-                    <input type="hidden" id="otr" name="otr" value="{{ old('otr') }}" readonly>
+                    <input type="text" placeholder="On The Road Price" id="angka_motor_menurun" value="{{ old('price') }}" name="price" readonly>
+                    <input type="hidden" id="otr" name="otr" value="{{ old('otr') }}">
                 </div>
             </div>
 
