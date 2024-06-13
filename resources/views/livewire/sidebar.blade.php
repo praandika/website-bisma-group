@@ -9,7 +9,7 @@
             <img src="{{ asset('img/ic-home-dark.png') }}"><span>Home</span>
         </div>
     </a>
-    <a href="/product/all" wire:navigate>
+    <a href="{{ url('product/all') }}" wire:navigate>
         <div class="menu {{ Request::is('product/*') ? 'active' : '' }}">
             <div class="sidehover"></div>    
             <img src="{{ asset('img/ic-scooter-dark.png') }}"><span>Product</span>
