@@ -283,6 +283,18 @@ nav.mobile img {
     width: 30px;
 }
 
+nav.mobile .logo-menu {
+    background-color: var(--blue-4);
+}
+
+nav.mobile .contact-menu {
+    background-color: var(--green-2);
+}
+
+nav.mobile .simulation-menu {
+    background-color: var(--red-2);
+}
+
 .logo-mobile {
     display: none;
     padding-top: 10px;

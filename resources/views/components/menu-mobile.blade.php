@@ -2,18 +2,18 @@
     <div class="row">
         <div class="col-12 d-flex justify-content-between">
             <div class="col-4 logo-menu">
-                <img src="{{ asset('img/footer-logo.png') }}" class="img-fluid">
+                <img src="{{ asset('img/footer-logo.png') }}">
             </div>
             <div class="col-4 contact-menu">
                 <a href="{{ url('contact') }}" wire:navigate>
                     <img src="{{ asset('img/ic-call.png') }}">
-                    <span>Contact</span>
+                    <div>Contact</div>
                 </a>
             </div>
             <div class="col-4 simulation-menu">
                 <a href="{{ route('simulation') }}">
                     <img src="{{ asset('img/ic-calculator.png') }}">
-                    <span>Credit Simulation</span>
+                    <div>Credit Simulation</div>
                 </a>
             </div>
         </div>
