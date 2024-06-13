@@ -19,13 +19,13 @@
             <div class="row form-group">
                 <div class="col-lg-6 col-md-6">
                     <label for="setModel">Model :</label>
-                    <input type="text" placeholder="Choose Model" name="model" data-bs-toggle="modal" data-bs-target="#modalUnit" id="modelName" value="{{ old('model') }}" required>
+                    <input type="text" placeholder="Choose Model" name="model" data-bs-toggle="modal" data-bs-target="#modalUnit" id="modelName" value="{{ old('model') }}" readonly required>
                 </div>
 
                 <div class="col-lg-6 col-md-6">
                     <label for="setPriceStr">OTR Price :</label>
                     <input type="text" placeholder="On The Road Price" id="angka_motor_menurun" value="{{ old('price') }}" name="price">
-                    <input type="hidden" id="otr" name="otr" value="{{ old('otr') }}">
+                    <input type="hidden" id="otr" name="otr" value="{{ old('otr') }}" readonly>
                 </div>
             </div>
 
