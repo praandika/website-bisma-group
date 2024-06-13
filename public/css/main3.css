@@ -295,28 +295,8 @@ nav.mobile img {
     z-index: 99999;
 }
 
-.add-menu .logo-menu {
-    /* From https://css.glass */
-    background: rgba(5, 41, 79, 0.68);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(11.4px);
-    -webkit-backdrop-filter: blur(11.4px);
-}
-
-.add-menu .contact-menu {
-    /* From https://css.glass */
-    background: rgba(6, 244, 157, 0.68);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(11.4px);
-    -webkit-backdrop-filter: blur(11.4px);
-}
-
-.add-menu .simulation-menu {
-    /* From https://css.glass */
-    background: rgba(244, 228, 6, 0.68);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(11.4px);
-    -webkit-backdrop-filter: blur(11.4px);
+.add-menu img {
+    width: 50px;
 }
 
 .logo-mobile {
