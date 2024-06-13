@@ -144,7 +144,7 @@ if (! function_exists('asset')) {
      */
     function asset($path, $secure = null)
     {
-        return app('url')->asset("public/".$path, $secure);
+        return app('url')->asset("http://127.0.0.1/public/".$path, $secure);
     }
 }
 
