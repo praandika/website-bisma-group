@@ -15,7 +15,7 @@
         <link rel="icon" href="{{ asset('img/yamaha-bisma.png') }}" type="image/x-icon"/>
         @stack('before-css')
         <link rel="stylesheet" href="{{ asset('css/main8.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/responsive5.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/responsive6.css') }}">
         @stack('after-css')
         <script src="https://kit.fontawesome.com/f7d1a663d2.js" crossorigin="anonymous"></script>
     </head>

@@ -685,6 +685,7 @@
 
     .add-menu {
         width: 50%;
+        bottom: 60px;
     }
 
     .item {
