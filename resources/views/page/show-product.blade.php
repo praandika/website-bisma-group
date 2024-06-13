@@ -65,7 +65,7 @@
                         <td class="data">{{ $o['address'] }}</td>
                         <td class="data">Available</td>
                         <td class="action">
-                            <a href="https://wa.me/{{ $o['whatsapp'] }}" target="_blank">
+                            <a href="https://wa.me/{{ $o['whatsapp'] }}?text=Hi%20saya%20ingin%20info%20sepeda%20motor%20{{ $model }}%20(www.yamahabismagroup.com)" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </a>
                         </td>
