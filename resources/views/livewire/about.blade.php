@@ -23,7 +23,10 @@
                     </p>
                     @endforeach
                     <img src="{{ asset('img/gajahmada.jpg') }}" class="img-fluid" width="50%" style="outline: 5px double #D4AF37; outline-offset: 5px;">
-                    <p>Jalan Gajah Mada Denpasar Tempo Doeloe</p>
+                    <p>
+                        <span style="font-size: 10px; color: #dedede;">Photo credit National Archives</span>
+                        Jalan Gajah Mada Denpasar Tempo Doeloe
+                    </p>
                 </div>
             </div>
         </div>
