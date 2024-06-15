@@ -50,7 +50,7 @@
                     </a>
                 </div>
                 <div class="sosmed">
-                    <a href="/contact" target="_blank">
+                    <a href="{{ url('contact') }}" target="_blank">
                         <img src="{{ asset('img/ic-whatsapp-color-darken.png') }}" class="img-fluid">
                         <p style="color: #D9DBDB;">
                             Official Whatsapp
