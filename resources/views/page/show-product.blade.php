@@ -73,11 +73,11 @@
                     @empty
                     <tr>
                         <td colspan="4" style="text-align: center;">Out of Stocks!</td>
-                    </tr>
-                    <tr>
-                        <a href="{{ url('contact') }}" class="apply" wire:navigate>
-                            Contact Us to Book <i class="fa-brands fa-whatsapp"></i>
-                        </a>
+                        <td>
+                            <a href="{{ url('contact') }}" class="apply" wire:navigate>
+                                <i class="fa-brands fa-whatsapp"></i> Contact Us to Book
+                            </a>
+                        </td>
                     </tr>
                     @endforelse
                 </table>
