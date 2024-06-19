@@ -195,6 +195,31 @@ a {
     z-index: 99999;
 }
 
+/* LOADER */
+.loader {
+    z-index: 999991;
+    height: 100%;
+    width: 0%;
+    background-color: var(--blue-1);
+    position: fixed;
+    top: 0;
+    -webkit-animation: loader 1s ease-in; /* Safari */
+    animation: loader 1s ease-in;
+}
+
+@-webkit-keyframes loader {
+    0% { width: 0%; }
+    50% { width: 200%; }
+    100% { width: 0%; }
+}
+
+@keyframes loader {
+    0% { width: 0%; }
+    50% { width: 200%; }
+    100% { width: 0%; }
+}
+/* END LOADER */
+
 /* Logo */
 .logo {
     background-color: var(--black-1);
