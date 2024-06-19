@@ -203,8 +203,8 @@ a {
     background-color: var(--blue-1);
     position: fixed;
     top: 0;
-    -webkit-animation: loader 1s ease-in; /* Safari */
-    animation: loader 1s ease-in;
+    -webkit-animation: loader 0.8s ease-out; /* Safari */
+    animation: loader 0.8s ease-out;
 }
 
 @-webkit-keyframes loader {
