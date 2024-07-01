@@ -35,7 +35,10 @@ class Simulation extends Component
         
         if ($this->rate == 0.0240) {
             $admin = 1518000;
-            $bungaPerTahun = 0.288;
+            $bungaPerTahun = 0.288; //bunga * 12
+        } elseif($this->rate == 0.0185) {
+            $admin = 1818000;
+            $bungaPerTahun = 0.222;
         } else {
             $admin = 1818000;
             $bungaPerTahun = 0.21;

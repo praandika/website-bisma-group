@@ -14,7 +14,10 @@ class SimulationController extends Controller
     public function count(Request $req){
         if ($req->rate == 0.0240) {
             $admin = 1518000;
-            $bungaPerTahun = 0.288;
+            $bungaPerTahun = 0.288; //bunga * 12
+        } elseif($req->rate == 0.0185) {
+            $admin = 1818000;
+            $bungaPerTahun = 0.222;
         } else {
             $admin = 1818000;
             $bungaPerTahun = 0.21;
