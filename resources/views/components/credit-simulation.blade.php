@@ -18,6 +18,7 @@
             <select id="bunga_menurun">
                 <option>- Pilih Bunga -</option>
                 <option value="0.0240">2.4%</option>
+                <option value="0.0185">1.85%</option>
                 <option value="0.0175">1.75%</option>
             </select>
         </div>
