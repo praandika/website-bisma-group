@@ -35,6 +35,7 @@
                     <select id="bunga_menurun" name="rate">
                         <option>- Pilih Bunga -</option>
                         <option value="0.0240" @if(session('rate') == 0.0240) selected @endif>2.4%</option>
+                        <option value="0.0185" @if(session('rate') == 0.0185) selected @endif>1.85%</option>
                         <option value="0.0175" @if(session('rate') == 0.0175) selected @endif>1.75%</option>
                     </select>
                 </div>
