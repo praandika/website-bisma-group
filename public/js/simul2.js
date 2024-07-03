@@ -46,9 +46,9 @@ function kredit_menurun() {
         dp.replace(/</g, "&lt;").replace(/>/g, "&gt;");
         let bunga = document.getElementById("bunga_menurun").value;
         bunga.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        if (bunga == 0.0240) {
+        if (bunga == 0.0240) { //update bunga 2.42
             admin = 1518000;
-            bungaPerTahun = 0.288; //bunga*12
+            bungaPerTahun = 0.29; //bunga*12
         } else if(bunga == 0.0185) {
             admin = 1818000;
             bungaPerTahun = 0.222;
