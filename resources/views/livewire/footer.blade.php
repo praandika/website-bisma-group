@@ -25,7 +25,7 @@
     </span>
     <div class="credit">
         <p>
-            &copy; COPYRIGHT BY <a href="https://www.instagram.com/dikanayoga/" target="_blank">ANDIKA PRANAYOGA</a>
+            &copy; COPYRIGHT BY <a href="https://www.linkedin.com/in/iwayanandika" target="_blank">ANDIKA PRANAYOGA</a>
         </p>
         <p>
             <img src="{{ asset('img/footer-logo-2.png') }}" alt="Bisma Pertama Terpercaya" class="img-fluid" style="width: 120px;">
