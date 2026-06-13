@@ -202,7 +202,7 @@
                 <div class="pulse-btn pulse" id="speedo" onmouseover="showSpeedo()" onmouseout="hideSpeedo()"></div>
 
                 <div class="popup hide" id="smartKeyContent">
-                    <img src="{{ asset('img/featured/smart-key.jpg') }}" class="img-fluid">
+                    <img src="{{ asset('img/featured/filano/smart-key.jpg') }}" class="img-fluid">
 
                     <div class="description">
                         <span class="title">Smart Key System</span>
@@ -216,7 +216,7 @@
                 </div>
 
                 <div class="popup hide" id="luggageContent">
-                    <img src="{{ asset('img/featured/luggage.jpg') }}" class="img-fluid">
+                    <img src="{{ asset('img/featured/filano/luggage.jpg') }}" class="img-fluid">
 
                     <div class="description">
                         <span class="title">Spacious Luggage 27L with LED Lamp</span>
@@ -228,7 +228,7 @@
                 </div>
 
                 <div class="popup hide" id="smartFrontRefuelContent">
-                    <img src="{{ asset('img/featured/smart-front-refuel.jpg') }}" class="img-fluid">
+                    <img src="{{ asset('img/featured/filano/smart-front-refuel.jpg') }}" class="img-fluid">
 
                     <div class="description">
                         <span class="title">Smart Front Refuel</span>
@@ -239,7 +239,7 @@
                 </div>
 
                 <div class="popup hide" id="blueCoreContent">
-                    <img src="{{ asset('img/featured/blue-core.jpg') }}" class="img-fluid">
+                    <img src="{{ asset('img/featured/filano/blue-core.jpg') }}" class="img-fluid">
 
                     <div class="description">
                         <span class="title">Blue Core Hybrid 125cc</span>
@@ -254,7 +254,7 @@
                 </div>
 
                 <div class="popup hide" id="seatContent">
-                    <img src="{{ asset('img/featured/premium-seat.jpg') }}" class="img-fluid">
+                    <img src="{{ asset('img/featured/filano/premium-seat.jpg') }}" class="img-fluid">
 
                     <div class="description">
                         <span class="title">Premium Seat with Embroidery Style</span>
@@ -265,7 +265,7 @@
                 </div>
 
                 <div class="popup hide" id="ledContent">
-                    <img src="{{ asset('img/featured/led.jpg') }}" class="img-fluid">
+                    <img src="{{ asset('img/featured/filano/led.jpg') }}" class="img-fluid">
 
                     <div class="description">
                         <span class="title">All New LED Lighting System</span>
@@ -278,7 +278,7 @@
                 </div>
 
                 <div class="popup hide" id="footstepContent">
-                    <img src="{{ asset('img/featured/footstep.jpg') }}" class="img-fluid">
+                    <img src="{{ asset('img/featured/filano/footstep.jpg') }}" class="img-fluid">
 
                     <div class="description">
                         <span class="title">Convenience Footstep</span>
@@ -289,7 +289,7 @@
                 </div>
 
                 <div class="popup hide" id="tireContent">
-                    <img src="{{ asset('img/featured/wide-tire.jpg') }}" class="img-fluid">
+                    <img src="{{ asset('img/featured/filano/wide-tire.jpg') }}" class="img-fluid">
 
                     <div class="description">
                         <span class="title">Wide Tire & Tubeless</span>
@@ -300,7 +300,7 @@
                 </div>
 
                 <div class="popup hide" id="speedoContent">
-                    <img src="{{ asset('img/featured/speedo.jpg') }}" class="img-fluid">
+                    <img src="{{ asset('img/featured/filano/speedo.jpg') }}" class="img-fluid">
 
                     <div class="description">
                         <span class="title">Digital Speedometer with TFT Sub Display</span>
