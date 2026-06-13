@@ -26,10 +26,10 @@
                     </a>
                 </div>
                 <div class="sosmed">
-                    <a href="https://www.tiktok.com/@yamaha_bisma" target="_blank">
+                    <a href="https://www.tiktok.com/@yamahabismaofficial" target="_blank">
                         <img src="{{ asset('img/ic-tiktok-color.png') }}" class="img-fluid">
                         <p style="color: #D9DBDB;">
-                            @yamaha_bisma
+                            @yamahabismaofficial
                         </p>
                     </a>
                 </div>
