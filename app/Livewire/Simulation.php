@@ -33,12 +33,12 @@ class Simulation extends Component
         ->pluck('price');
         $this->otr = $price[0];
         
-        if ($this->rate == 0.0240) { //bunga 2.42
+        if ($this->rate == 0.0244) { //bunga 2.44
             $admin = 1518000;
-            $bungaPerTahun = 0.29; //bunga * 12
-        } elseif($this->rate == 0.0185) {
+            $bungaPerTahun = 0.2928; //bunga * 12
+        } elseif($this->rate == 0.0187) {
             $admin = 1818000;
-            $bungaPerTahun = 0.222;
+            $bungaPerTahun = 0.2244;
         } else {
             $admin = 1818000;
             $bungaPerTahun = 0.21;
