@@ -12,15 +12,15 @@ class SimulationController extends Controller
     }
 
     public function count(Request $req){
-        if ($req->rate == 0.0240) { //update bunga 2.42
+        if ($req->rate == 0.0244) { //update bunga 2.44
             $admin = 1518000;
-            $bungaPerTahun = 0.29; //bunga * 12
-        } elseif($req->rate == 0.0185) {
+            $bungaPerTahun = $req->rate * 12; //bunga * 12
+        } elseif($req->rate == 0.0187) {
             $admin = 1818000;
-            $bungaPerTahun = 0.222;
+            $bungaPerTahun = $req->rate * 12;
         } else {
             $admin = 1818000;
-            $bungaPerTahun = 0.21;
+            $bungaPerTahun = $req->rate * 12;
         }
 
         $tenor12 = 12;
