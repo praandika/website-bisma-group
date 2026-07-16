@@ -187,6 +187,6 @@
 
     </script>
 
-    <script src="{{ asset('js/simul2.js') }}"></script>
+    <script src="{{ asset('js/simul3.js') }}"></script>
     @endpush
 </div>

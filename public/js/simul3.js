@@ -46,15 +46,12 @@ function kredit_menurun() {
         dp.replace(/</g, "&lt;").replace(/>/g, "&gt;");
         let bunga = document.getElementById("bunga_menurun").value;
         bunga.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        if (bunga == 0.0240) { //update bunga 2.42
+        if (bunga == 0.0244) { //update bunga 2.44
             admin = 1518000;
-            bungaPerTahun = 0.29; //bunga*12
-        } else if(bunga == 0.0185) {
+            bungaPerTahun = bunga * 12; //bunga*12
+        } else if(bunga == 0.0187) {
             admin = 1818000;
-            bungaPerTahun = 0.222;
-        } else if(bunga == 0.0175) {
-            admin = 1818000;
-            bungaPerTahun = 0.21;
+            bungaPerTahun = bunga * 12;
         } else {
             alert("Please enter Rate value");
             document.getElementById("bunga_menurun").style = "border: 1px solid red";
